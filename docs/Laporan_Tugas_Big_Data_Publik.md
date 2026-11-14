@@ -13,13 +13,13 @@
 - **Penyimpanan Dataset:** Apache Hadoop HDFS 3.5.0 (Single-Node Pseudo-Distributed, Blok 128 MiB, Replikasi 1)
 - **Pemrosesan Komputasi:** Python 3 Standalone Single-Pass Streaming (Tanpa Spark, MapReduce, atau YARN)
 - **Rekonsiliasi Baris:** 100% PASS (Manifest: 12.416.036 == Validasi: 12.416.036 == Dianalisis: 12.416.036)
-- **Status Validasi Kualitas:** WARNING (6 PASS, 4 WARNING, 0 FAIL | 895 rekaman FRP nol & gap 2 hari Myanmar)
+- **Status Validasi Kualitas:** WARNING (6 PASS, 4 WARNING, 0 FAIL | 895 rekaman FRP nol ditandai & jeda liputan 2 hari Myanmar)
 
 ---
 
 ## RINGKASAN EKSEKUTIF
 
-Laporan ini menyajikan hasil analisis deskriptif terhadap 12.416.036 rekaman deteksi titik panas (*hotspot*) aktif dari satelit NASA FIRMS VIIRS S-NPP di lima negara Asia Tenggara selama kurun waktu 2012 hingga 2026. Data mentah berukuran ~1 GB disimpan di dalam sistem berkas terdistribusi Apache Hadoop HDFS (konfigurasi *single-node pseudo-distributed* dengan ukuran blok 128 MiB) dan diverifikasi berstatus `HEALTHY` tanpa blok korup.
+Laporan ini menyajikan hasil analisis deskriptif terhadap 12.416.036 rekaman deteksi titik panas (*hotspot*) aktif dari satelit NASA FIRMS VIIRS S-NPP di lima negara Asia Tenggara selama kurun waktu 2012 hingga 2026. Data mentah berukuran ~1 GB disimpan di dalam sistem berkas Apache Hadoop HDFS dalam konfigurasi *single-node pseudo-distributed* (faktor replikasi 1, ukuran blok 128 MiB) dan diverifikasi berstatus `HEALTHY` tanpa blok korup (arsitektur pengujian mandiri, bukan kluster multi-node dengan toleransi kesalahan tingkat produksi).
 
 Pemrosesan analitik multi-dimensi dilakukan melalui mesin komputasi mandiri Python 3 berbasis aliran satu lintasan (*single-pass stream processing*) yang membaca data lokal secara baris-demi-baris (`csv.reader`). Pendekatan ini berhasil menyelesaikan agregasi 12,4 juta baris dalam 125,8 detik dengan puncak konsumsi memori fisik (*RAM working set*) hanya 39,28 MiB, tanpa memerlukan *cluster computing framework* seperti Apache Spark atau MapReduce.
 
@@ -30,13 +30,13 @@ Hasil analisis deskriptif mengidentifikasi variasi volume deteksi antar-tahun de
 ## 1. PENDAHULUAN & BATASAN METODOLOGI
 
 ### 1.1 Latar Belakang & Tujuan
-Penginderaan jauh berbasis satelit polar orbit seperti Suomi-NPP dengan sensor VIIRS (resolusi 375 meter) menghasilkan observasi termal harian yang sangat masif. Proyek ini bertujuan untuk menguji keandalan penyimpanan terdistribusi HDFS dan mengekstraksi ringkasan deskriptif pola spasial, temporal, dan atribut fisik hotspot di lima negara Asia Tenggara.
+Penginderaan jauh berbasis satelit polar orbit seperti Suomi-NPP dengan sensor VIIRS (resolusi 375 meter) menghasilkan observasi termal harian yang sangat masif. Proyek ini bertujuan untuk menguji keandalan penyimpanan HDFS dan mengekstraksi ringkasan deskriptif pola spasial, temporal, dan atribut fisik hotspot di lima negara Asia Tenggara.
 
 ### 1.2 Batasan Metodologi Ilmiah
 Untuk menghindari misinterpretasi data satelit, batasan berikut ditegaskan secara ketat:
 1. **Analisis Deskriptif:** Proyek ini bersifat observasional deskriptif. Tidak ada pemodelan prediktif (*predictive modeling*), simulasi perambatan api, atau sistem peringatan dini (*early warning system*) yang dibangun.
 2. **Hotspot Bukan Jumlah Kebakaran:** Angka yang dilaporkan adalah **jumlah baris rekaman piksel deteksi termal**, bukan jumlah kejadian insiden kebakaran tunggal terkonfirmasi. Satu kebakaran besar dapat menghasilkan banyak deteksi hotspot dalam satu lintasan orbit.
-3. **FRP Bukan Luas Terbakar:** *Fire Radiative Power* (FRP, dalam megawatt/MW) adalah ukuran laju pelepasan energi radiasi termal saat sensor melintas, bukan luas area yang hangus terbakar.
+3. **FRP Bukan Luas Terbakar:** *Fire Radiative Power* (FRP, dalam megawatt/MW) adalah ukuran laju pelepasan energi radiasi termal saat sensor melintas, bukan luas area yang hangus terbakar. Angka akumulasi FRP seluruh deteksi (99.116.950,00 MW) merupakan penjumlahan aritmatika dari nilai FRP seluruh 12,4 juta rekaman deteksi individual selama 14,8 tahun, bukan daya radiasi regional yang diukur secara simultan. Rata-rata regional adalah 7,98 MW per deteksi.
 4. **Tingkat Kepercayaan (Confidence):** Kategori `'n'` (*nominal*) merepresentasikan kualitas sedang/moderat, bukan *high*.
 5. **Grid Spasial 0,1°:** Partisi grid menunjukkan densitas konsentrasi deteksi sensor berdasarkan koordinat geografis, **bukan pembuktian penyebab atau kepemilikan lahan secara definitif** tanpa data verifikasi lapangan independen.
 6. **Tahun Parsial:** Tahun 2012 (mulai 20 Januari) dan tahun 2026 (sampai awal November) merupakan tahun pengamatan parsial sehingga tidak diperbandingkan langsung dengan tahun penuh tanpa normalisasi.
@@ -47,17 +47,17 @@ Untuk menghindari misinterpretasi data satelit, batasan berikut ditegaskan secar
 
 Sebanyak 10 dataset resmi dianalisis, mencakup feed Archive (15 kolom termasuk `type`) dan Near Real-Time (14 kolom tanpa `type`):
 
-| Dataset ID | Negara | Feed | Baris Data | Ukuran (Byte) | Kolom | Rentang Tanggal | Status SHA-256 | Validasi Kualitas |
+| Dataset ID | Negara | Feed | Baris Data | Ukuran (Byte) | Kolom | Rentang Tanggal | Status SHA-256 | Validasi Kualitas (Status & Temuan) |
 |---|---|---|---:|---:|:---:|:---:|:---:|:---:|
-| `ID-archive-837816` | Indonesia | Archive | 3.568.824 | 289.294.138 | 15 | 2012-01-20 s.d. 2026-07-31 | VERIFIED | WARNING (123 FRP=0) |
+| `ID-archive-837816` | Indonesia | Archive | 3.568.824 | 289.294.138 | 15 | 2012-01-20 s.d. 2026-07-31 | VERIFIED | WARNING (123 rekaman FRP=0, ditandai) |
 | `ID-nrt-837816` | Indonesia | NRT | 571.763 | 48.147.253 | 14 | 2026-08-01 s.d. 2026-11-02 | VERIFIED | PASS |
-| `MY-archive-838165` | Malaysia | Archive | 224.485 | 18.028.691 | 15 | 2012-01-20 s.d. 2026-07-31 | VERIFIED | WARNING (4 FRP=0) |
+| `MY-archive-838165` | Malaysia | Archive | 224.485 | 18.028.691 | 15 | 2012-01-20 s.d. 2026-07-31 | VERIFIED | WARNING (4 rekaman FRP=0, ditandai) |
 | `MY-nrt-838165` | Malaysia | NRT | 3.243 | 270.322 | 14 | 2026-08-01 s.d. 2026-11-02 | VERIFIED | PASS |
-| `MM-archive-838170` | Myanmar | Archive | 5.144.894 | 413.081.183 | 15 | 2012-01-20 s.d. 2026-07-30 | VERIFIED | WARNING (733 FRP=0) |
+| `MM-archive-838170` | Myanmar | Archive | 5.144.894 | 413.081.183 | 15 | 2012-01-20 s.d. 2026-07-30 | VERIFIED | WARNING (733 rekaman FRP=0, ditandai) |
 | `MM-nrt-838170` | Myanmar | NRT | 1.249 | 104.108 | 14 | 2026-08-02 s.d. 2026-11-01 | VERIFIED | PASS |
 | `PH-archive-838168` | Filipina | Archive | 459.570 | 37.209.509 | 15 | 2012-01-20 s.d. 2026-07-31 | VERIFIED | PASS |
 | `PH-nrt-838168` | Filipina | NRT | 2.779 | 232.787 | 14 | 2026-08-01 s.d. 2026-11-02 | VERIFIED | PASS |
-| `TH-archive-838094` | Thailand | Archive | 2.437.813 | 196.890.954 | 15 | 2012-01-20 s.d. 2026-07-31 | VERIFIED | WARNING (35 FRP=0) |
+| `TH-archive-838094` | Thailand | Archive | 2.437.813 | 196.890.954 | 15 | 2012-01-20 s.d. 2026-07-31 | VERIFIED | WARNING (35 rekaman FRP=0, ditandai) |
 | `TH-nrt-838094` | Thailand | NRT | 1.416 | 119.010 | 14 | 2026-08-01 s.d. 2026-11-01 | VERIFIED | PASS |
 | **TOTAL** | **5 Negara** | **10 File** | **12.416.036** | **1.003.377.955** | - | **2012-01-20 s.d. 2026-11-02** | **PASS** | **6 PASS / 4 WARN** |
 
@@ -67,12 +67,12 @@ Sebanyak 10 dataset resmi dianalisis, mencakup feed Archive (15 kolom termasuk `
 Proses validasi menyeluruh pada `scripts/02_validate.py` mencatat temuan-temuan berikut:
 1. **Rekonsiliasi Baris (100% PASS):** Jumlah baris pada manifest (12.416.036) sama persis dengan baris tervalidasi dan baris yang dianalisis. Tidak ada baris yang hilang atau terlewat.
 2. **Status Validasi Dataset (Overall: WARNING):**
-   - **PASS (6 dataset):** Seluruh feed NRT (5 dataset) dan feed Archive Filipina lolos validasi tanpa peringatan.
-   - **WARNING (4 dataset):** Sebanyak 895 rekaman pada empat dataset Archive mencatat nilai $\text{FRP} = 0,0\text{ MW}$ (Myanmar: 733, Indonesia: 123, Thailand: 35, Malaysia: 4; Filipina: 0). Nilai ini bukan kesalahan sintaks dan dipertahankan dalam analisis sebagai nilai numerik non-negatif batas deteksi sensor, namun dicatat sebagai peringatan kualitas karena ambang fisik minimum instrumen tidak diverifikasi secara mandiri.
-   - **FAIL (0 dataset):** Tidak ada kesalahan format, koordinat di luar jangkauan, atau inkonsistensi skema kritis.
+   - **PASS (6 dataset):** Seluruh feed NRT (5 dataset) dan feed Archive Filipina lolos validasi tanpa catatan peringatan.
+   - **WARNING (4 dataset):** Sebanyak 895 rekaman pada empat dataset Archive mencatat nilai $\text{FRP} = 0,0\text{ MW}$ (Myanmar: 733, Indonesia: 123, Thailand: 35, Malaysia: 4; Filipina: 0). Rekaman ini memiliki nilai FRP nol, dipertahankan dalam analisis, dan ditandai untuk ditinjau (*flagged for review*). Validitas fisiknya sebagai batas minimum sensor belum diverifikasi secara independen.
+   - **FAIL (0 dataset):** Tidak ada kesalahan format atau inkonsistensi skema. Nilai numerik koordinat berada dalam rentang kotak batas regional (*regional bounding-range check*: latitude [-10,98° s.d. 28,34°], longitude [92,18° s.d. 140,98°]); pemeriksaan ini merupakan validasi rentang angka koordinat, bukan pembuktian batas poligon administratif.
 3. **Analisis Gap Tanggal Archive–NRT:**
    - **PASS (4 negara):** Indonesia, Malaysia, Filipina, dan Thailand memiliki rentang tanggal yang bersambung langsung tanpa celah (`gap = 0 hari`, `overlap = 0 hari`).
-   - **WARNING (1 negara):** Myanmar memiliki jeda dua hari tanpa data antara akhir Archive (30 Juli 2026) dan awal NRT (02 Agustus 2026), yaitu pada tanggal 31 Juli 2026 dan 01 Agustus 2026. Analisis memproses data apa adanya tanpa menginterpolasi atau membuat asumsi data buatan.
+   - **WARNING (1 negara):** Myanmar memiliki jeda liputan tanggal 2 hari (*2-day date coverage gap between Archive and NRT feeds*) antara akhir feed Archive (30 Juli 2026) dan awal feed NRT (02 Agustus 2026), yaitu pada tanggal 31 Juli 2026 dan 01 Agustus 2026. Jeda ini merupakan celah liputan tanggal antar-feed pada berkas yang tersedia dan bukan kesimpulan ketiadaan observasi satelit pada tanggal tersebut. Analisis memproses data apa adanya tanpa membuat data buatan.
 
 ---
 
@@ -81,7 +81,7 @@ Proses validasi menyeluruh pada `scripts/02_validate.py` mencatat temuan-temuan 
 ### 3.1 Konfigurasi & Utilisasi Cluster
 Penyimpanan data mentah dilakukan pada sistem berkas terdistribusi Apache Hadoop 3.5.0 HDFS dalam mode *single-node pseudo-distributed*:
 - **Alamat Filesystem:** `hdfs://localhost:9000`
-- **Faktor Replikasi:** 1 (disesuaikan untuk arsitektur pengujian single datanode)
+- **Faktor Replikasi:** 1 (konfigurasi pengujian single-node pseudo-distributed untuk riset mandiri, bukan kluster multi-node fault-tolerant tingkat produksi)
 - **Ukuran Blok Default:** 128 MiB (134.217.728 Byte)
 - **Kapasitas Terkonfigurasi:** 1.006,85 GB (DFS Used: 964,49 MB / 0,10%, Sisa DFS: 950,65 GB)
 - **Status Pemeriksaan FSCK:** `HEALTHY` 100% pada namespace `/karhutla/raw`
@@ -165,15 +165,17 @@ Analisis bulanan rata-rata pada tahun penuh mengidentifikasi dua pola konsentras
 | Parameter Fisik | Indonesia | Malaysia | Myanmar | Filipina | Thailand | Total Regional |
 |---|---:|---:|---:|---:|---:|---:|
 | **Total Deteksi (Baris)** | 4.140.587 | 227.728 | 5.146.143 | 462.349 | 2.439.229 | **12.416.036** |
-| **Total FRP (MW)** | 33.495.668,45 | 1.667.364,68 | 47.874.734,30 | 3.074.460,02 | 13.004.722,55 | **99.116.950,00** |
-| **Rata-rata FRP (MW)** | **8,09** | **7,32** | **9,30** | **6,65** | **5,33** | **7,98** |
-| Jumlah FRP Nol ($0,0\text{ MW}$) | 123 | 4 | 733 | 0 | 35 | **895** |
+| **Akumulasi FRP Seluruh Deteksi (MW)** | 33.495.668,45 | 1.667.364,68 | 47.874.734,30 | 3.074.460,02 | 13.004.722,55 | **99.116.950,00** |
+| **Rata-rata FRP per Deteksi (MW)** | **8,09** | **7,32** | **9,30** | **6,65** | **5,33** | **7,98** |
+| Jumlah Rekaman FRP Nol ($0,0\text{ MW}$) | 123 | 4 | 733 | 0 | 35 | **895** |
 | **Confidence Low (`l`)** | 5,9% | 4,2% | 15,1% | 7,8% | 11,8% | **10,9%** |
 | **Confidence Nominal (`n`)** | 90,6% | 93,5% | 80,5% | 89,3% | 85,9% | **85,5%** |
 | **Confidence High (`h`)** | 3,4% | 2,3% | 4,4% | 2,9% | 2,3% | **3,6%** |
 | **Deteksi Siang Hari (`D`)** | 64,8% | 65,5% | 75,9% | 84,7% | 65,6% | **70,3%** |
 | **Deteksi Malam Hari (`N`)** | 35,2% | 34,5% | 24,1% | 15,3% | 34,4% | **29,7%** |
 | **Jumlah Grid Unik (0,1°)** | **15.123 Sel** | **2.462 Sel** | **6.114 Sel** | **3.207 Sel** | **4.623 Sel** | **31.529 Sel** |
+
+*Catatan Metrik:* Nilai akumulasi FRP (99.116.950,00 MW) merupakan penjumlahan aritmatika dari seluruh nilai FRP pada 12,4 juta rekaman deteksi individual selama 2012–2026, bukan pengukuran daya radiasi regional yang terjadi secara simultan. Rata-rata intensitas radiasi regional adalah 7,98 MW per deteksi.
 
 ---
 
@@ -197,9 +199,9 @@ Empat grafik visualisasi analitik resolusi tinggi disajikan di bawah ini:
 
 ## 7. KESIMPULAN & KETERBATASAN
 
-1. **Penyimpanan Terdistribusi:** Apache Hadoop HDFS 3.5.0 berhasil mempartisi dan menyimpan 1.003.377.955 Byte data mentah ke dalam 16 blok data 128 MiB dengan status 100% HEALTHY.
-2. **Efisiensi Komputasi Aliran:** Pemrosesan *single-pass streaming* Python 3 membuktikan efisiensi komputasi tinggi (125,8 detik dan memori puncak 39,28 MiB untuk 12,4 juta baris) tanpa dependensi eksternal berat.
-3. **Integritas Data:** Rekonsiliasi jumlah baris mencapai 100% PASS (12.416.036 baris). Validasi kualitas data mencatat status WARNING yang wajar akibat 895 rekaman bernilai FRP nol serta jeda dua hari data Myanmar.
+1. **Penyimpanan Dataset:** Apache Hadoop HDFS 3.5.0 berhasil mempartisi dan menyimpan 1.003.377.955 Byte data mentah ke dalam 16 blok data 128 MiB dengan status 100% HEALTHY dalam mode single-node pseudo-distributed (replikasi 1).
+2. **Efisiensi Komputasi Aliran:** Pemrosesan *single-pass streaming* Python 3 membuktikan efisiensi komputasi tinggi (125,8 detik dan memori puncak 39,28 MiB untuk 12,4 juta baris) tanpa dependensi eksternal berat Spark/MapReduce/YARN.
+3. **Integritas Data:** Rekonsiliasi jumlah baris mencapai 100% PASS (12.416.036 baris). Validasi kualitas data mencatat status WARNING yang terdokumentasi akibat 895 rekaman bernilai FRP nol serta jeda liputan 2 hari data Myanmar.
 4. **Fluktuasi Temporal:** Observasi empiris mendokumentasikan fluktuasi tahunan dengan volume tertinggi teramati pada 2015 dan terendah pada 2022.
 5. **Divergensi Musiman:** Distribusi musiman bulanan terbagi secara deskriptif menjadi dua periode konsentrasi: Februari–April untuk kawasan utara (Myanmar dan Thailand) dan Agustus–Oktober untuk kawasan selatan (Indonesia dan Malaysia).
 6. **Keterbatasan Penelitian:** Analisis ini terbatas pada sifat observasional data satelit. Data ini tidak menyediakan data tutupan lahan (*land cover*), kondisi cuaca harian, atau verifikasi lapangan (*ground truth*), sehingga konsentrasi spasial tidak dapat diartikan sebagai pembuktian sumber atau penyebab kebakaran tertentu.

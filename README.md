@@ -7,7 +7,7 @@
 [![Data Validation](https://img.shields.io/badge/Data%20Validation-WARNING%20(Reviewed)-yellow.svg)]()
 [![License](https://img.shields.io/badge/License-MIT-lightgrey.svg)](LICENSE)
 
-An enterprise-grade, descriptive Big Data analytics and data engineering project analyzing **12,416,036 satellite active fire hotspot detection records** across five ASEAN countries (**Indonesia, Malaysia, Myanmar, Philippines, and Thailand**) over nearly 15 years (January 20, 2012 – November 2, 2026).
+A comprehensive, descriptive Big Data analytics and data engineering project analyzing **12,416,036 satellite active fire hotspot detection records** across five ASEAN countries (**Indonesia, Malaysia, Myanmar, Philippines, and Thailand**) over nearly 15 years (January 20, 2012 – November 2, 2026).
 
 This repository demonstrates end-to-end data lifecycle capabilities: distributed raw data storage in **Apache Hadoop HDFS**, high-performance stream processing using a **standalone Python single-pass algorithm**, strict **data quality assurance & reconciliation auditing**, and multi-dimensional descriptive analytics with publication-quality visualizations.
 
@@ -15,17 +15,17 @@ This repository demonstrates end-to-end data lifecycle capabilities: distributed
 > - **Descriptive Observational Scope:** This study provides empirical, descriptive summaries of satellite observations. It does **not** construct predictive models, machine learning forecasts, or early warning systems (EWS).
 > - **Detections vs. Fires:** Reported metrics reflect individual satellite thermal anomaly pixel records (375 m resolution), **not** verified discrete wildfire incidents or burned land area in hectares.
 > - **Spatial Density Interpretation:** Grid aggregation at 0.1° (~11 km) resolution illustrates geographic clustering of thermal detections. In the absence of ground-truth field data, satellite imagery does **not** identify or prove specific causes (such as industrial operations, agricultural practices, peatland fires, or volcanic activity).
-> - **Execution Architecture:** Hadoop HDFS is utilized for distributed raw dataset storage. Analytics run as a local Python single-pass streaming pipeline that reads CSV files line-by-line; **no Apache Spark, Hadoop MapReduce, or YARN frameworks were employed**.
+> - **Execution Architecture:** Hadoop HDFS is utilized in a single-node pseudo-distributed configuration (replication factor 1) for raw dataset storage (educational/testing setup, not a production-grade fault-tolerant cluster). Analytics execute as a local Python single-pass streaming pipeline reading CSV files line-by-line; **no Apache Spark, Hadoop MapReduce, or YARN frameworks were employed**.
 
 ---
 
 ## Executive Summary & Key Highlights
 
 - **Big Data Scale:** Ingested and reconciled **12,416,036 records** (1,003,377,955 bytes / ~956.90 MiB) across 10 official NASA FIRMS VIIRS S-NPP datasets.
-- **Storage Layer (HDFS):** Apache Hadoop 3.5.0 HDFS cluster in single-node pseudo-distributed mode, partitioning data into 16 blocks (128 MiB block size) verified as 100% HEALTHY with zero corrupt or missing blocks.
+- **Storage Layer (HDFS):** Apache Hadoop 3.5.0 HDFS in a single-node pseudo-distributed configuration (replication factor 1), partitioning raw data into 16 blocks (128 MiB block size) verified as 100% HEALTHY (designed for testing distributed storage, not a production fault-tolerant multi-node cluster).
 - **High-Efficiency Stream Compute:** A pure Python 3 single-pass generator algorithm processed the full 12.4M-row corpus in **125.8 seconds** with a peak memory working set of only **39.28 MiB RAM** ($O(N)$ time, $O(K)$ space complexity).
 - **100% Row Audit Reconciliation:** Perfect row balance verified across all pipeline stages: Manifest (12,416,036) == Validation (12,416,036) == Analytics (12,416,036).
-- **Transparent Data Quality Validation:** Audited 10 datasets: **6 PASS, 4 WARNING, 0 FAIL**. Identified and documented 895 zero-FRP boundary values and a 2-day temporal gap in Myanmar data without ad-hoc data fabrication.
+- **Transparent Data Quality Validation:** Audited 10 datasets: **6 PASS, 4 WARNING, 0 FAIL**. Identified and documented 895 records with zero FRP values (retained in analysis, flagged for review) and a 2-day date coverage gap between Myanmar Archive and NRT feeds without ad-hoc data fabrication.
 
 ---
 
@@ -35,12 +35,14 @@ All findings are extracted directly from audited outputs in `outputs/analysis/`:
 
 ### 1. Geographic Distribution
 Myanmar and Indonesia together account for **74.8%** of all recorded thermal detections in Southeast Asia:
-- **Myanmar (MM):** **5,146,143 detections (41.45%)** | 47,874,734.30 MW total FRP | Mean FRP: 9.30 MW
-- **Indonesia (ID):** **4,140,587 detections (33.35%)** | 33,495,668.45 MW total FRP | Mean FRP: 8.09 MW
-- **Thailand (TH):** **2,439,229 detections (19.65%)** | 13,004,722.55 MW total FRP | Mean FRP: 5.33 MW
-- **Philippines (PH):** **462,349 detections (3.72%)** | 3,074,460.02 MW total FRP | Mean FRP: 6.65 MW
-- **Malaysia (MY):** **227,728 detections (1.83%)** | 1,667,364.68 MW total FRP | Mean FRP: 7.32 MW
-- **Regional Total:** **12,416,036 detections** | **99,116,950.00 MW total FRP** | **Regional Mean: 7.98 MW**
+- **Myanmar (MM):** **5,146,143 detections (41.45%)** | Sum of FRP across detections: 47,874,734.30 MW | Mean FRP: 9.30 MW per detection
+- **Indonesia (ID):** **4,140,587 detections (33.35%)** | Sum of FRP across detections: 33,495,668.45 MW | Mean FRP: 8.09 MW per detection
+- **Thailand (TH):** **2,439,229 detections (19.65%)** | Sum of FRP across detections: 13,004,722.55 MW | Mean FRP: 5.33 MW per detection
+- **Philippines (PH):** **462,349 detections (3.72%)** | Sum of FRP across detections: 3,074,460.02 MW | Mean FRP: 6.65 MW per detection
+- **Malaysia (MY):** **227,728 detections (1.83%)** | Sum of FRP across detections: 1,667,364.68 MW | Mean FRP: 7.32 MW per detection
+- **Regional Total:** **12,416,036 detections** | **Cumulative Sum of FRP across detections: 99,116,950.00 MW** | **Regional Mean FRP: 7.98 MW per detection**
+
+*(Important interpretation note on FRP metric: The 99.12M MW figure represents the cumulative arithmetic sum of recorded instantaneous FRP values across all 12.4M individual detection records over nearly 15 years; it is not a measure of simultaneous regional radiative power output.)*
 
 ### 2. Interannual Trends (2012–2026)
 Thermal detection counts exhibited substantial annual variations across the 15-year period:
@@ -57,7 +59,7 @@ Analysis of monthly averages demonstrates distinct temporal clustering between s
 - *Methodological Caveat:* These distributions describe observed monthly timings only. Specific causal mechanisms (such as agricultural burning schedules or monsoon wind patterns) are not asserted without independent atmospheric and land-use records.
 
 ### 4. Physical & Sensor Attributes
-- **Fire Radiative Power (FRP):** Instantaneous radiant heat output averaged **7.98 MW** regionally. Myanmar exhibited the highest average intensity (9.30 MW), while Thailand recorded the lowest (5.33 MW). 895 records (0.007%) registered $FRP = 0.0\text{ MW}$ as valid lower-limit sensor readings.
+- **Fire Radiative Power (FRP):** The mean FRP was **7.98 MW per detection** across the region (Myanmar highest at 9.30 MW; Thailand lowest at 5.33 MW). The cumulative sum of FRP across all detections totaled **99,116,950.00 MW** (an arithmetic aggregation across all detection timestamps, not simultaneous regional radiative power). 895 records (0.007%) recorded $FRP = 0.0\text{ MW}$; these records were retained in the analysis and flagged for review, noting that their physical validity as minimum sensor detection limits has not been independently verified.
 - **Detection Confidence:** The vast majority of detections were evaluated as **nominal quality (85.51% / 10,616,605 records)**, with **10.94% low confidence (1,357,783)** and **3.56% high confidence (441,648)**.
 - **Diurnal Pass Cycles:** **70.32% of detections (8,731,313)** occurred during daytime overpasses (`D`), while **29.68% (3,684,723)** were captured during nighttime overpasses (`N`).
 
@@ -81,14 +83,16 @@ Data validation was executed via `scripts/02_validate.py` across all 10 datasets
 |---|:---:|---|:---:|
 | **Row Count Reconciliation** | 100% | 12,416,036 (Manifest) == 12,416,036 (Validation) == 12,416,036 (Analysis) | **PASS** |
 | **Schema Uniformity** | 100% | 5 Archive datasets (15 cols with `type`), 5 NRT datasets (14 cols without `type`) | **PASS** |
-| **Coordinate Ranges** | 100% | Latitude [-10.98° to 28.34°], Longitude [92.18° to 140.98°] within ASEAN boundaries | **PASS** |
+| **Coordinate Range Check** | 100% | Latitude [-10.98° to 28.34°], Longitude [92.18° to 140.98°] within regional bounding-range box | **PASS** |
 | **Cryptographic Integrity** | 100% | All 10 raw CSV files matched precomputed SHA-256 hashes in `config/datasets.json` | **PASS** |
 | **Dataset-Level Quality** | 6 PASS / 4 WARN | 4 Archive datasets (MM: 733, ID: 123, TH: 35, MY: 4) flagged for $FRP = 0.0\text{ MW}$ | **WARNING** |
-| **Temporal Continuity (Gaps)** | 4 PASS / 1 WARN | Myanmar Archive ended 2026-07-30; NRT started 2026-08-02 (2-day unobserved gap) | **WARNING** |
+| **Temporal Continuity (Gaps)** | 4 PASS / 1 WARN | Myanmar Archive ended 2026-07-30; NRT started 2026-08-02 (2-day date coverage gap between feeds) | **WARNING** |
+
+*(Note on Coordinate Range Check: This check validates numeric coordinate min/max bounding ranges; it does not perform polygon-level administrative boundary verification.)*
 
 ### Detailed Explanation of Validation Warnings:
-1. **Zero FRP Values (895 records):** Detected in Archive feeds for Myanmar (733), Indonesia (123), Thailand (35), and Malaysia (4). These records are valid numeric entries representing lower-bound sensor detection limits, but are flagged under data quality standards because thermal products generally measure positive radiative power. They are preserved in the corpus to prevent arbitrary data loss.
-2. **Myanmar Temporal Gap (2 days):** A 2-day gap (July 31, 2026 and August 1, 2026) exists between the end of Myanmar Archive and the beginning of Myanmar NRT. The pipeline processes this transition transparently without imputing synthetic records. All other four countries have zero gaps and zero overlaps.
+1. **Zero FRP Values (895 records):** Detected in Archive feeds for Myanmar (733), Indonesia (123), Thailand (35), and Malaysia (4). These records recorded $FRP = 0.0\text{ MW}$; they are retained in the analysis and flagged for quality review, as their physical validity as minimum sensor detection thresholds has not been independently verified, while preserving them avoids arbitrary truncation bias.
+2. **Myanmar Date Coverage Gap (2 days):** A 2-day date coverage gap exists between the Myanmar Archive feed (concluded on July 30, 2026) and the NRT feed (commenced on August 2, 2026), leaving July 31 and August 1, 2026 uncovered between the two feeds. This reflects a feed transition coverage gap in the acquired dataset rather than a confirmed absence of satellite overpasses. The pipeline documents this transition transparently without imputing synthetic data. The remaining four countries exhibit continuous coverage with zero gaps and zero overlaps.
 
 ---
 
@@ -153,7 +157,7 @@ Data validation was executed via `scripts/02_validate.py` across all 10 datasets
 
 ### Storage Layer (Apache Hadoop HDFS)
 - **Hadoop Version:** Apache Hadoop 3.5.0 on Ubuntu Linux (WSL2), OpenJDK 17.0.20 64-Bit.
-- **Topology:** Single-Node Pseudo-Distributed (`fs.defaultFS = hdfs://localhost:9000`), 1 DataNode, replication factor 1.
+- **Topology:** Single-Node Pseudo-Distributed (`fs.defaultFS = hdfs://localhost:9000`), 1 DataNode, replication factor 1 (educational single-node architecture; not a production-grade fault-tolerant multi-node cluster).
 - **Block Configuration:** 128 MiB block size (`dfs.blocksize = 134217728`).
 - **Cluster Status:** `hdfs fsck /karhutla/raw -files -blocks` confirms 16 data blocks, 0 corrupt blocks, 0 missing blocks (100% HEALTHY).
 
@@ -293,11 +297,11 @@ python scripts/04_visualize.py
 
 1. **Descriptive Observational Scope:** This study provides observational summaries of satellite detections. It does **not** perform predictive modeling, fire propagation simulation, or early warning system (EWS) forecasting.
 2. **Detection Counts vs. Fires:** Reported figures represent individual satellite thermal detection pixel records, **not** confirmed wildfire events or burned surface areas. A single large fire can produce multiple detection points across successive orbits.
-3. **Fire Radiative Power (FRP):** FRP (MW) measures the instantaneous rate of radiant heat output at the moment of satellite overpass. It is a physical proxy for fire intensity, **not burned area in hectares**.
+3. **Fire Radiative Power (FRP):** FRP (MW) measures the instantaneous rate of radiant heat output at the moment of satellite overpass. The cumulative figure (99,116,950.00 MW) is the arithmetic sum of recorded FRP across all individual detection records over nearly 15 years, not a simultaneous regional power output. Regional mean FRP is 7.98 MW per detection. FRP serves as a physical proxy for detection intensity, **not burned area in hectares**.
 4. **Spatial Grid Interpretation:** Aggregation into 0.1° (~11 km) grid cells identifies areas of high detection concentration; it does **not** prove, identify, or attribute physical causes (such as industrial operations, agricultural practices, peatland fires, or volcanic activity) without independent ground-truth verification.
 5. **Confidence Scoring:** VIIRS confidence values are categorized as `'l'` (low), `'n'` (nominal), and `'h'` (high). Over 85% of detections in this study are nominal quality.
 6. **Partial Years:** Data for 2012 begins on January 20, and 2026 data concludes on November 2. Both years are flagged with `is_partial_year = true` and are separated from full-year averages to avoid comparison bias.
-7. **Zero FRP Values:** 895 records (0.007% of the corpus) recorded $FRP = 0.0\text{ MW}$, reflecting valid sensor detection limit boundary values that were preserved in calculations.
+7. **Zero FRP Values:** 895 records (0.007% of the corpus) recorded $FRP = 0.0\text{ MW}$. These records were retained in the analytical calculations and flagged for review; their physical validity as true sensor detection thresholds has not been independently verified.
 8. **Exclusion of Redundant Data:** File `DL_FIRE_SV-C2_837806/fire_archive_SV-C2_837806.csv` (1,708,204 rows; Indonesia 2020–2025) was identified as a subset duplicate of `ID-archive-837816` and explicitly excluded to prevent double counting.
 
 ---
