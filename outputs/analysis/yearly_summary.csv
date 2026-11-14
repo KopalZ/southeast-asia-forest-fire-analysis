@@ -1,0 +1,156 @@
+country_code,country_name,feed,year,detections,is_partial_year,note
+ID,Indonesia,archive,2012,318613,True,tahun parsial: data dimulai 2012-01-20
+ID,Indonesia,archive,2013,257222,False,
+ID,Indonesia,archive,2014,555597,False,
+ID,Indonesia,archive,2015,875824,False,
+ID,Indonesia,archive,2016,117250,False,
+ID,Indonesia,archive,2017,90849,False,
+ID,Indonesia,archive,2018,191173,False,
+ID,Indonesia,archive,2019,437281,False,
+ID,Indonesia,archive,2020,91536,False,
+ID,Indonesia,archive,2021,68325,False,
+ID,Indonesia,archive,2022,57220,False,
+ID,Indonesia,archive,2023,253388,False,
+ID,Indonesia,archive,2024,104186,False,
+ID,Indonesia,archive,2025,96056,False,
+ID,Indonesia,archive,2026,54304,True,"tahun parsial: archive berakhir 2026-07-31, NRT 2026-11-02"
+ID,Indonesia,nrt,2026,571763,True,"tahun parsial: archive berakhir 2026-07-31, NRT 2026-11-02"
+ID,Indonesia,combined,2012,318613,True,tahun parsial: data dimulai 2012-01-20; gabungan archive+NRT
+ID,Indonesia,combined,2013,257222,False,"gabungan archive+NRT, bukan kejadian unik"
+ID,Indonesia,combined,2014,555597,False,"gabungan archive+NRT, bukan kejadian unik"
+ID,Indonesia,combined,2015,875824,False,"gabungan archive+NRT, bukan kejadian unik"
+ID,Indonesia,combined,2016,117250,False,"gabungan archive+NRT, bukan kejadian unik"
+ID,Indonesia,combined,2017,90849,False,"gabungan archive+NRT, bukan kejadian unik"
+ID,Indonesia,combined,2018,191173,False,"gabungan archive+NRT, bukan kejadian unik"
+ID,Indonesia,combined,2019,437281,False,"gabungan archive+NRT, bukan kejadian unik"
+ID,Indonesia,combined,2020,91536,False,"gabungan archive+NRT, bukan kejadian unik"
+ID,Indonesia,combined,2021,68325,False,"gabungan archive+NRT, bukan kejadian unik"
+ID,Indonesia,combined,2022,57220,False,"gabungan archive+NRT, bukan kejadian unik"
+ID,Indonesia,combined,2023,253388,False,"gabungan archive+NRT, bukan kejadian unik"
+ID,Indonesia,combined,2024,104186,False,"gabungan archive+NRT, bukan kejadian unik"
+ID,Indonesia,combined,2025,96056,False,"gabungan archive+NRT, bukan kejadian unik"
+ID,Indonesia,combined,2026,626067,True,"tahun parsial: archive berakhir 2026-07-31, NRT 2026-11-02; gabungan archive+NRT"
+MY,Malaysia,archive,2012,19907,True,tahun parsial: data dimulai 2012-01-20
+MY,Malaysia,archive,2013,17349,False,
+MY,Malaysia,archive,2014,38865,False,
+MY,Malaysia,archive,2015,24237,False,
+MY,Malaysia,archive,2016,25589,False,
+MY,Malaysia,archive,2017,7605,False,
+MY,Malaysia,archive,2018,13561,False,
+MY,Malaysia,archive,2019,20364,False,
+MY,Malaysia,archive,2020,9552,False,
+MY,Malaysia,archive,2021,8590,False,
+MY,Malaysia,archive,2022,5275,False,
+MY,Malaysia,archive,2023,8268,False,
+MY,Malaysia,archive,2024,11045,False,
+MY,Malaysia,archive,2025,7208,False,
+MY,Malaysia,archive,2026,7070,True,"tahun parsial: archive berakhir 2026-07-31, NRT 2026-11-02"
+MY,Malaysia,nrt,2026,3243,True,"tahun parsial: archive berakhir 2026-07-31, NRT 2026-11-02"
+MY,Malaysia,combined,2012,19907,True,tahun parsial: data dimulai 2012-01-20; gabungan archive+NRT
+MY,Malaysia,combined,2013,17349,False,"gabungan archive+NRT, bukan kejadian unik"
+MY,Malaysia,combined,2014,38865,False,"gabungan archive+NRT, bukan kejadian unik"
+MY,Malaysia,combined,2015,24237,False,"gabungan archive+NRT, bukan kejadian unik"
+MY,Malaysia,combined,2016,25589,False,"gabungan archive+NRT, bukan kejadian unik"
+MY,Malaysia,combined,2017,7605,False,"gabungan archive+NRT, bukan kejadian unik"
+MY,Malaysia,combined,2018,13561,False,"gabungan archive+NRT, bukan kejadian unik"
+MY,Malaysia,combined,2019,20364,False,"gabungan archive+NRT, bukan kejadian unik"
+MY,Malaysia,combined,2020,9552,False,"gabungan archive+NRT, bukan kejadian unik"
+MY,Malaysia,combined,2021,8590,False,"gabungan archive+NRT, bukan kejadian unik"
+MY,Malaysia,combined,2022,5275,False,"gabungan archive+NRT, bukan kejadian unik"
+MY,Malaysia,combined,2023,8268,False,"gabungan archive+NRT, bukan kejadian unik"
+MY,Malaysia,combined,2024,11045,False,"gabungan archive+NRT, bukan kejadian unik"
+MY,Malaysia,combined,2025,7208,False,"gabungan archive+NRT, bukan kejadian unik"
+MY,Malaysia,combined,2026,10313,True,"tahun parsial: archive berakhir 2026-07-31, NRT 2026-11-02; gabungan archive+NRT"
+MM,Myanmar,archive,2012,373861,True,tahun parsial: data dimulai 2012-01-20
+MM,Myanmar,archive,2013,408852,False,
+MM,Myanmar,archive,2014,403209,False,
+MM,Myanmar,archive,2015,348513,False,
+MM,Myanmar,archive,2016,329210,False,
+MM,Myanmar,archive,2017,286202,False,
+MM,Myanmar,archive,2018,262125,False,
+MM,Myanmar,archive,2019,380610,False,
+MM,Myanmar,archive,2020,414425,False,
+MM,Myanmar,archive,2021,351526,False,
+MM,Myanmar,archive,2022,232524,False,
+MM,Myanmar,archive,2023,424514,False,
+MM,Myanmar,archive,2024,338017,False,
+MM,Myanmar,archive,2025,302675,False,
+MM,Myanmar,archive,2026,288631,True,"tahun parsial: archive berakhir 2026-07-31, NRT 2026-11-02"
+MM,Myanmar,nrt,2026,1249,True,"tahun parsial: archive berakhir 2026-07-31, NRT 2026-11-02"
+MM,Myanmar,combined,2012,373861,True,tahun parsial: data dimulai 2012-01-20; gabungan archive+NRT
+MM,Myanmar,combined,2013,408852,False,"gabungan archive+NRT, bukan kejadian unik"
+MM,Myanmar,combined,2014,403209,False,"gabungan archive+NRT, bukan kejadian unik"
+MM,Myanmar,combined,2015,348513,False,"gabungan archive+NRT, bukan kejadian unik"
+MM,Myanmar,combined,2016,329210,False,"gabungan archive+NRT, bukan kejadian unik"
+MM,Myanmar,combined,2017,286202,False,"gabungan archive+NRT, bukan kejadian unik"
+MM,Myanmar,combined,2018,262125,False,"gabungan archive+NRT, bukan kejadian unik"
+MM,Myanmar,combined,2019,380610,False,"gabungan archive+NRT, bukan kejadian unik"
+MM,Myanmar,combined,2020,414425,False,"gabungan archive+NRT, bukan kejadian unik"
+MM,Myanmar,combined,2021,351526,False,"gabungan archive+NRT, bukan kejadian unik"
+MM,Myanmar,combined,2022,232524,False,"gabungan archive+NRT, bukan kejadian unik"
+MM,Myanmar,combined,2023,424514,False,"gabungan archive+NRT, bukan kejadian unik"
+MM,Myanmar,combined,2024,338017,False,"gabungan archive+NRT, bukan kejadian unik"
+MM,Myanmar,combined,2025,302675,False,"gabungan archive+NRT, bukan kejadian unik"
+MM,Myanmar,combined,2026,289880,True,"tahun parsial: archive berakhir 2026-07-31, NRT 2026-11-02; gabungan archive+NRT"
+PH,Filipina,archive,2012,20667,True,tahun parsial: data dimulai 2012-01-20
+PH,Filipina,archive,2013,26887,False,
+PH,Filipina,archive,2014,35595,False,
+PH,Filipina,archive,2015,47695,False,
+PH,Filipina,archive,2016,51664,False,
+PH,Filipina,archive,2017,19982,False,
+PH,Filipina,archive,2018,28463,False,
+PH,Filipina,archive,2019,44311,False,
+PH,Filipina,archive,2020,38745,False,
+PH,Filipina,archive,2021,19655,False,
+PH,Filipina,archive,2022,14370,False,
+PH,Filipina,archive,2023,24094,False,
+PH,Filipina,archive,2024,42425,False,
+PH,Filipina,archive,2025,13253,False,
+PH,Filipina,archive,2026,31764,True,"tahun parsial: archive berakhir 2026-07-31, NRT 2026-11-02"
+PH,Filipina,nrt,2026,2779,True,"tahun parsial: archive berakhir 2026-07-31, NRT 2026-11-02"
+PH,Filipina,combined,2012,20667,True,tahun parsial: data dimulai 2012-01-20; gabungan archive+NRT
+PH,Filipina,combined,2013,26887,False,"gabungan archive+NRT, bukan kejadian unik"
+PH,Filipina,combined,2014,35595,False,"gabungan archive+NRT, bukan kejadian unik"
+PH,Filipina,combined,2015,47695,False,"gabungan archive+NRT, bukan kejadian unik"
+PH,Filipina,combined,2016,51664,False,"gabungan archive+NRT, bukan kejadian unik"
+PH,Filipina,combined,2017,19982,False,"gabungan archive+NRT, bukan kejadian unik"
+PH,Filipina,combined,2018,28463,False,"gabungan archive+NRT, bukan kejadian unik"
+PH,Filipina,combined,2019,44311,False,"gabungan archive+NRT, bukan kejadian unik"
+PH,Filipina,combined,2020,38745,False,"gabungan archive+NRT, bukan kejadian unik"
+PH,Filipina,combined,2021,19655,False,"gabungan archive+NRT, bukan kejadian unik"
+PH,Filipina,combined,2022,14370,False,"gabungan archive+NRT, bukan kejadian unik"
+PH,Filipina,combined,2023,24094,False,"gabungan archive+NRT, bukan kejadian unik"
+PH,Filipina,combined,2024,42425,False,"gabungan archive+NRT, bukan kejadian unik"
+PH,Filipina,combined,2025,13253,False,"gabungan archive+NRT, bukan kejadian unik"
+PH,Filipina,combined,2026,34543,True,"tahun parsial: archive berakhir 2026-07-31, NRT 2026-11-02; gabungan archive+NRT"
+TH,Thailand,archive,2012,165440,True,tahun parsial: data dimulai 2012-01-20
+TH,Thailand,archive,2013,197060,False,
+TH,Thailand,archive,2014,199652,False,
+TH,Thailand,archive,2015,190585,False,
+TH,Thailand,archive,2016,237372,False,
+TH,Thailand,archive,2017,132768,False,
+TH,Thailand,archive,2018,117081,False,
+TH,Thailand,archive,2019,235482,False,
+TH,Thailand,archive,2020,221248,False,
+TH,Thailand,archive,2021,113225,False,
+TH,Thailand,archive,2022,54784,False,
+TH,Thailand,archive,2023,180567,False,
+TH,Thailand,archive,2024,143538,False,
+TH,Thailand,archive,2025,103794,False,
+TH,Thailand,archive,2026,145217,True,"tahun parsial: archive berakhir 2026-07-31, NRT 2026-11-02"
+TH,Thailand,nrt,2026,1416,True,"tahun parsial: archive berakhir 2026-07-31, NRT 2026-11-02"
+TH,Thailand,combined,2012,165440,True,tahun parsial: data dimulai 2012-01-20; gabungan archive+NRT
+TH,Thailand,combined,2013,197060,False,"gabungan archive+NRT, bukan kejadian unik"
+TH,Thailand,combined,2014,199652,False,"gabungan archive+NRT, bukan kejadian unik"
+TH,Thailand,combined,2015,190585,False,"gabungan archive+NRT, bukan kejadian unik"
+TH,Thailand,combined,2016,237372,False,"gabungan archive+NRT, bukan kejadian unik"
+TH,Thailand,combined,2017,132768,False,"gabungan archive+NRT, bukan kejadian unik"
+TH,Thailand,combined,2018,117081,False,"gabungan archive+NRT, bukan kejadian unik"
+TH,Thailand,combined,2019,235482,False,"gabungan archive+NRT, bukan kejadian unik"
+TH,Thailand,combined,2020,221248,False,"gabungan archive+NRT, bukan kejadian unik"
+TH,Thailand,combined,2021,113225,False,"gabungan archive+NRT, bukan kejadian unik"
+TH,Thailand,combined,2022,54784,False,"gabungan archive+NRT, bukan kejadian unik"
+TH,Thailand,combined,2023,180567,False,"gabungan archive+NRT, bukan kejadian unik"
+TH,Thailand,combined,2024,143538,False,"gabungan archive+NRT, bukan kejadian unik"
+TH,Thailand,combined,2025,103794,False,"gabungan archive+NRT, bukan kejadian unik"
+TH,Thailand,combined,2026,146633,True,"tahun parsial: archive berakhir 2026-07-31, NRT 2026-11-02; gabungan archive+NRT"

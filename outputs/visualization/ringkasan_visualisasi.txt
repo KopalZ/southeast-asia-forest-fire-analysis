@@ -1,0 +1,36 @@
+RINGKASAN VISUALISASI
+============================================================
+
+1. 01_tren_tahunan.png
+   Tujuan: menunjukkan perubahan jumlah deteksi hotspot per negara
+   dari 2012 sampai 2026. Sumbu Y memakai skala logaritmik agar
+   negara dengan volume kecil tetap terbaca. Tahun 2012 dan 2026
+   diberi latar abu-abu karena merupakan tahun parsial.
+
+2. 02_pola_bulanan.png
+   Tujuan: menunjukkan pola musiman rata-rata per bulan.
+   Hanya tahun lengkap 2013-2025 yang dipakai; 2012 dan 2026
+   dikecualikan agar tidak bias.
+
+3. 03_top20_grid.png
+   Tujuan: menunjukkan 20 sel grid 0,1 derajat dengan deteksi
+   terbanyak. Setiap batang diberi kode negara agar lokasi
+   antarnegara tidak tercampur.
+
+4. 04_karakteristik.png
+   Tujuan: membandingkan komposisi confidence, proporsi siang/malam,
+   dan rata-rata FRP per negara.
+
+CATATAN
+- Semua angka adalah jumlah baris deteksi hotspot, bukan jumlah
+  kebakaran terkonfirmasi.
+- FRP adalah Fire Radiative Power (MW), bukan luas area terbakar.
+- Confidence 'n' berarti nominal, bukan high.
+- Sumber: NASA FIRMS SNPP VIIRS SV-C2 archive + NRT,
+  diolah pada outputs/analysis.
+
+FILE GAMBAR
+- 01_tren_tahunan.png (247.8 KB)
+- 02_pola_bulanan.png (178.8 KB)
+- 03_top20_grid.png (166.8 KB)
+- 04_karakteristik.png (118.3 KB)

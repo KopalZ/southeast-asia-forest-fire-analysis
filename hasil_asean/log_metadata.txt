@@ -1,0 +1,88 @@
+
+[indonesia | archive] /karhutla/raw/archive/fire_archive_SV-C2_837816.csv
+  Baris   : 3,568,824 | Kolom: 15 | type: ada
+  Tanggal : 2012-01-20 s.d. 2026-07-31
+  Lat     : -10.97676 s.d. 5.8782 | Lon: 95.01992 s.d. 140.9774
+  Sensor  : [('SNPP', 'SNPP')]
+  Sebaran type: {'0': 3396415, '1': 48217, '2': 105595, '3': 18597}
+  Waktu   : 38.2 detik
+
+[indonesia | nrt] /karhutla/raw/nrt/fire_nrt_SV-C2_837816.csv
+  Baris   : 571,763 | Kolom: 14 | type: TIDAK ADA
+  Tanggal : 2026-08-01 s.d. 2026-11-02
+  Lat     : -10.90808 s.d. 5.59956 | Lon: 95.24565 s.d. 140.97745
+  Sensor  : [('SNPP', 'SNPP')]
+  Waktu   : 10.9 detik
+
+[malaysia | archive] /karhutla/raw/asean/malaysia/fire_archive_SV-C2_838165.csv
+  Baris   : 224,485 | Kolom: 15 | type: ada
+  Tanggal : 2012-01-20 s.d. 2026-07-31
+  Lat     : 0.85496 s.d. 7.35384 | Lon: 99.69318 s.d. 119.26263
+  Sensor  : [('SNPP', 'SNPP')]
+  Sebaran type: {'0': 200884, '2': 23100, '3': 501}
+  Waktu   : 18.2 detik
+
+[malaysia | nrt] /karhutla/raw/asean/malaysia/fire_nrt_SV-C2_838165.csv
+  Baris   : 3,243 | Kolom: 14 | type: TIDAK ADA
+  Tanggal : 2026-08-01 s.d. 2026-11-02
+  Lat     : 0.88932 s.d. 6.97574 | Lon: 100.37138 s.d. 119.25977
+  Sensor  : [('SNPP', 'SNPP')]
+  Waktu   : 4.2 detik
+
+[myanmar | archive] /karhutla/raw/asean/myanmar/fire_archive_SV-C2_838170.csv
+  Baris   : 5,144,894 | Kolom: 15 | type: ada
+  Tanggal : 2012-01-20 s.d. 2026-07-30
+  Lat     : 9.85164 s.d. 28.34412 | Lon: 92.1775 s.d. 101.1609
+  Sensor  : [('SNPP', 'SNPP')]
+  Sebaran type: {'0': 5138316, '2': 4231, '3': 2347}
+  Waktu   : 75.8 detik
+
+[myanmar | nrt] /karhutla/raw/asean/myanmar/fire_nrt_SV-C2_838170.csv
+  Baris   : 1,249 | Kolom: 14 | type: TIDAK ADA
+  Tanggal : 2026-08-02 s.d. 2026-11-01
+  Lat     : 11.78242 s.d. 28.09506 | Lon: 92.18768 s.d. 100.52812
+  Sensor  : [('SNPP', 'SNPP')]
+  Waktu   : 10.7 detik
+
+[philippines | archive] /karhutla/raw/asean/philippines/fire_archive_SV-C2_838168.csv
+  Baris   : 459,570 | Kolom: 15 | type: ada
+  Tanggal : 2012-01-20 s.d. 2026-07-31
+  Lat     : 4.6706 s.d. 20.82937 | Lon: 116.93593 s.d. 126.59941
+  Sensor  : [('SNPP', 'SNPP')]
+  Sebaran type: {'0': 443156, '1': 6205, '2': 6646, '3': 3563}
+  Waktu   : 8.9 detik
+
+[philippines | nrt] /karhutla/raw/asean/philippines/fire_nrt_SV-C2_838168.csv
+  Baris   : 2,779 | Kolom: 14 | type: TIDAK ADA
+  Tanggal : 2026-08-01 s.d. 2026-11-02
+  Lat     : 5.09024 s.d. 18.89149 | Lon: 117.42926 s.d. 126.60167
+  Sensor  : [('SNPP', 'SNPP')]
+  Waktu   : 5.3 detik
+
+[thailand | archive] /karhutla/raw/asean/thailand/fire_archive_SV-C2_838094.csv
+  Baris   : 2,437,813 | Kolom: 15 | type: ada
+  Tanggal : 2012-01-20 s.d. 2026-07-31
+  Lat     : 5.65368 s.d. 20.44033 | Lon: 97.35231 s.d. 105.64988
+  Sensor  : [('SNPP', 'SNPP')]
+  Sebaran type: {'0': 2417280, '2': 19364, '3': 1169}
+  Waktu   : 42.0 detik
+
+[thailand | nrt] /karhutla/raw/asean/thailand/fire_nrt_SV-C2_838094.csv
+  Baris   : 1,416 | Kolom: 14 | type: TIDAK ADA
+  Tanggal : 2026-08-01 s.d. 2026-11-01
+  Lat     : 5.94559 s.d. 20.39986 | Lon: 98.24861 s.d. 105.41496
+  Sensor  : [('SNPP', 'SNPP')]
+  Waktu   : 5.6 detik
+
+============================================================
+TOTAL BARIS SEMUA FILE : 12,416,036
+PEMERIKSAAN TUMPANG TINDIH ARCHIVE vs NRT (tanggal)
+  indonesia   : archive berakhir 2026-07-31, NRT mulai 2026-08-01 -> tidak tumpang tindih
+  malaysia    : archive berakhir 2026-07-31, NRT mulai 2026-08-01 -> tidak tumpang tindih
+  myanmar     : archive berakhir 2026-07-30, NRT mulai 2026-08-02 -> tidak tumpang tindih
+  philippines : archive berakhir 2026-07-31, NRT mulai 2026-08-01 -> tidak tumpang tindih
+  thailand    : archive berakhir 2026-07-31, NRT mulai 2026-08-01 -> tidak tumpang tindih
+
+Total waktu: 219.9 detik
+Puncak memori proses Python: 12.5 MB
+Metadata tersimpan: hasil_asean/metadata_file.csv

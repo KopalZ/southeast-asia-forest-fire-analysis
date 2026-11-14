@@ -1,0 +1,6 @@
+country_code,country_name,archive_date_min,archive_date_max,archive_distinct_dates,nrt_date_min,nrt_date_max,nrt_distinct_dates,gap_days,overlap_days,archive_partial_start,archive_partial_end,status,note
+ID,Indonesia,2012-01-20,2026-07-31,5254,2026-08-01,2026-11-02,93,0,0,True,True,PASS,archive dan NRT bersambung tanpa gap
+MM,Myanmar,2012-01-20,2026-07-30,4509,2026-08-02,2026-11-01,73,2,0,True,True,WARNING,ada 2 hari tanpa data di antara archive dan NRT
+MY,Malaysia,2012-01-20,2026-07-31,5092,2026-08-01,2026-11-02,90,0,0,True,True,PASS,archive dan NRT bersambung tanpa gap
+PH,Filipina,2012-01-20,2026-07-31,5046,2026-08-01,2026-11-02,93,0,0,True,True,PASS,archive dan NRT bersambung tanpa gap
+TH,Thailand,2012-01-20,2026-07-31,4997,2026-08-01,2026-11-01,86,0,0,True,True,PASS,archive dan NRT bersambung tanpa gap

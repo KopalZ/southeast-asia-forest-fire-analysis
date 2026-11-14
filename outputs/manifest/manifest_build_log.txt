@@ -1,0 +1,12 @@
+MANIFEST BUILD — 2026-11-04T22:18:21+07:00
+========================================================================
+[VERIFIED] ID-archive-837816 | rows=3,568,824 | cols=15 | type=True | 2012-01-20..2026-07-31 | 275.89 MiB
+[VERIFIED] ID-nrt-837816 | rows=571,763 | cols=14 | type=False | 2026-08-01..2026-11-02 | 45.92 MiB
+[VERIFIED] MY-archive-838165 | rows=224,485 | cols=15 | type=True | 2012-01-20..2026-07-31 | 17.19 MiB
+[VERIFIED] MY-nrt-838165 | rows=3,243 | cols=14 | type=False | 2026-08-01..2026-11-02 | 0.26 MiB
+[VERIFIED] MM-archive-838170 | rows=5,144,894 | cols=15 | type=True | 2012-01-20..2026-07-30 | 393.94 MiB
+[VERIFIED] MM-nrt-838170 | rows=1,249 | cols=14 | type=False | 2026-08-02..2026-11-01 | 0.1 MiB
+[VERIFIED] PH-archive-838168 | rows=459,570 | cols=15 | type=True | 2012-01-20..2026-07-31 | 35.49 MiB
+[VERIFIED] PH-nrt-838168 | rows=2,779 | cols=14 | type=False | 2026-08-01..2026-11-02 | 0.22 MiB
+[VERIFIED] TH-archive-838094 | rows=2,437,813 | cols=15 | type=True | 2012-01-20..2026-07-31 | 187.77 MiB
+[VERIFIED] TH-nrt-838094 | rows=1,416 | cols=14 | type=False | 2026-08-01..2026-11-01 | 0.11 MiB

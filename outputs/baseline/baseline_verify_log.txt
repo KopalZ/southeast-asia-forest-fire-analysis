@@ -1,0 +1,31 @@
+BASELINE INDONESIA v1 — VERIFIKASI REPRODUKSI
+========================================================
+Waktu              : 2026-11-04T22:19:24+07:00
+Sumber output lama : .\DL_FIRE_SV-C2_837816\hasil_analisis
+Baseline beku      : .\baseline\indonesia_v1
+Status pembekuan   : created
+Jumlah file beku   : 10
+Hasil hitung ulang : .\outputs\baseline\recomputed
+
+HASIL PERBANDINGAN
+[PASS] total_baris: expected=4140587 actual=4140587
+[PASS] tanggal_awal: expected=2012-01-20 actual=2012-01-20
+[PASS] tanggal_akhir: expected=2026-11-02 actual=2026-11-02
+[PASS] jumlah_tahun: expected=15 actual=15
+[PASS] jumlah_bulan: expected=179 actual=179
+[PASS] jumlah_grid_spasial: expected=15123 actual=15123
+[PASS] latitude_minimum: expected=-10.97676 actual=-10.97676
+[PASS] latitude_maksimum: expected=5.8782 actual=5.8782
+[PASS] longitude_minimum: expected=95.01992 actual=95.01992
+[PASS] longitude_maksimum: expected=140.97745 actual=140.97745
+[PASS] rata_rata_frp: expected=8.09 actual=8.09
+[PASS] frp_minimum: expected=0.0 actual=0.0
+[PASS] frp_maksimum: expected=1951.3 actual=1951.3
+[PASS] hotspot_tahunan: expected=15 entri actual=15 entri
+[PASS] hotspot_bulanan: expected=179 entri actual=179 entri
+[PASS] hotspot_spasial: expected=15123 entri actual=15123 entri
+[PASS] hotspot_karakteristik: expected=5 entri actual=5 entri
+[PASS] top5_tahun: expected=[('2015', 875824), ('2026', 626067), ('2014', 555597), ('2019', 437281), ('2012', 318613)] actual=[('2015', 875824), ('2026', 626067), ('2014', 555597), ('2019', 437281), ('2012', 318613)]
+[PASS] top5_bulan: expected=[('2015-10', 322008), ('2015-09', 295035), ('2026-09', 214804), ('2026-10', 209142), ('2019-09', 197018)] actual=[('2015-10', 322008), ('2015-09', 295035), ('2026-09', 214804), ('2026-10', 209142), ('2019-09', 197018)]
+
+OVERALL: PASS (19/19 checks)

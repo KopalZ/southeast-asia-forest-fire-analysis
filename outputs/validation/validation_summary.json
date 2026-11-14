@@ -1,0 +1,2278 @@
+{
+  "generated_at": "2026-11-04T22:41:22+07:00",
+  "manifest": "config/datasets.json",
+  "dataset_count": 10,
+  "overall_status": "WARNING",
+  "counts": {
+    "PASS": 6,
+    "WARNING": 4,
+    "FAIL": 0
+  },
+  "gap_counts": {
+    "PASS": 4,
+    "WARNING": 1,
+    "FAIL": 0
+  },
+  "datasets": [
+    {
+      "dataset_id": "ID-archive-837816",
+      "country_code": "ID",
+      "country_name": "Indonesia",
+      "feed": "archive",
+      "area_code": "837816",
+      "path_local": "DL_FIRE_SV-C2_837816/fire_archive_SV-C2_837816.csv",
+      "path_hdfs": "/karhutla/raw/archive/fire_archive_SV-C2_837816.csv",
+      "status": "WARNING",
+      "rows_manifest": 3568824,
+      "rows_actual": 3568824,
+      "bytes_manifest": 289294138,
+      "bytes_actual": 289294138,
+      "n_columns": 15,
+      "has_type": true,
+      "date_min": "2012-01-20",
+      "date_max": "2026-07-31",
+      "distinct_dates": 5254,
+      "missing": {},
+      "missing_total": 0,
+      "missing_critical": 0,
+      "missing_noncritical": 0,
+      "invalid": {
+        "date": 0,
+        "date_out_of_range": 0,
+        "coordinate": 0,
+        "coordinate_zero": 0,
+        "frp": 0,
+        "frp_zero": 123,
+        "confidence": 0,
+        "daynight": 0,
+        "type": 0,
+        "acq_time": 0
+      },
+      "distributions": {
+        "confidence": {
+          "n": 3229850,
+          "l": 217551,
+          "h": 121423
+        },
+        "daynight": {
+          "D": 2387560,
+          "N": 1181264
+        },
+        "type": {
+          "0": 3396415,
+          "1": 48217,
+          "2": 105595,
+          "3": 18597
+        }
+      },
+      "version_values": [
+        "2"
+      ],
+      "satellite_values": [
+        "SNPP"
+      ],
+      "instrument_values": [
+        "SNPP"
+      ],
+      "checks": [
+        {
+          "check": "file_size",
+          "status": "PASS",
+          "expected": 289294138,
+          "actual": 289294138,
+          "note": "ukuran file dibandingkan dengan manifest"
+        },
+        {
+          "check": "header",
+          "status": "PASS",
+          "expected": "latitude,longitude,brightness,scan,track,acq_date,acq_time,satellite,instrument,confidence,version,bright_t31,frp,daynight,type",
+          "actual": "latitude,longitude,brightness,scan,track,acq_date,acq_time,satellite,instrument,confidence,version,bright_t31,frp,daynight,type",
+          "note": "urutan kolom sesuai"
+        },
+        {
+          "check": "n_columns",
+          "status": "PASS",
+          "expected": 15,
+          "actual": 15,
+          "note": ""
+        },
+        {
+          "check": "row_count",
+          "status": "PASS",
+          "expected": 3568824,
+          "actual": 3568824,
+          "note": "jumlah baris dibandingkan dengan manifest"
+        },
+        {
+          "check": "field_count",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "baris dengan jumlah field tidak sama dengan header"
+        },
+        {
+          "check": "missing_critical",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "kolom kritis: latitude, longitude, acq_date, acq_time, confidence, frp, daynight"
+        },
+        {
+          "check": "missing_noncritical",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "kolom non-kritis: brightness, scan, track, satellite, instrument, version, bright_t31, type"
+        },
+        {
+          "check": "invalid_date",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "tanggal tidak dapat diparsing sebagai YYYY-MM-DD"
+        },
+        {
+          "check": "date_out_of_range",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "tahun di luar rentang proyek 2012-2026"
+        },
+        {
+          "check": "date_range_manifest",
+          "status": "PASS",
+          "expected": "2012-01-20..2026-07-31",
+          "actual": "2012-01-20..2026-07-31",
+          "note": "rentang tanggal aktual dibandingkan manifest"
+        },
+        {
+          "check": "invalid_coordinate",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "koordinat non-numerik, non-finite, atau di luar -90..90 / -180..180"
+        },
+        {
+          "check": "coordinate_zero",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "koordinat (0,0) mencurigakan; bukan aturan keras"
+        },
+        {
+          "check": "invalid_frp",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "FRP non-numerik, non-finite, atau negatif"
+        },
+        {
+          "check": "frp_zero",
+          "status": "WARNING",
+          "expected": 0,
+          "actual": 123,
+          "note": "FRP bernilai 0; bukan pelanggaran sintaks, ambang minimum tidak diverifikasi"
+        },
+        {
+          "check": "invalid_confidence",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "nilai di luar {l,n,h}"
+        },
+        {
+          "check": "invalid_daynight",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "nilai di luar {D,N}"
+        },
+        {
+          "check": "type_presence",
+          "status": "PASS",
+          "expected": "ada",
+          "actual": "ada",
+          "note": "type wajib untuk archive; tidak wajib untuk NRT"
+        },
+        {
+          "check": "invalid_type",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "nilai di luar {0,1,2,3}"
+        },
+        {
+          "check": "invalid_acq_time",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "format HHMM 4 digit; zona waktu belum diverifikasi"
+        },
+        {
+          "check": "version_values",
+          "status": "PASS",
+          "expected": "2",
+          "actual": "2",
+          "note": "versi produk di dalam file"
+        },
+        {
+          "check": "satellite_values",
+          "status": "PASS",
+          "expected": "SNPP",
+          "actual": "SNPP",
+          "note": "nilai sensor/instrumen di dalam file"
+        },
+        {
+          "check": "instrument_values",
+          "status": "PASS",
+          "expected": "SNPP",
+          "actual": "SNPP",
+          "note": "nilai sensor/instrumen di dalam file"
+        }
+      ],
+      "notes": [
+        "frp_zero: 123 (FRP bernilai 0; bukan pelanggaran sintaks, ambang minimum tidak diverifikasi)"
+      ]
+    },
+    {
+      "dataset_id": "ID-nrt-837816",
+      "country_code": "ID",
+      "country_name": "Indonesia",
+      "feed": "nrt",
+      "area_code": "837816",
+      "path_local": "DL_FIRE_SV-C2_837816/fire_nrt_SV-C2_837816.csv",
+      "path_hdfs": "/karhutla/raw/nrt/fire_nrt_SV-C2_837816.csv",
+      "status": "PASS",
+      "rows_manifest": 571763,
+      "rows_actual": 571763,
+      "bytes_manifest": 48147253,
+      "bytes_actual": 48147253,
+      "n_columns": 14,
+      "has_type": false,
+      "date_min": "2026-08-01",
+      "date_max": "2026-11-02",
+      "distinct_dates": 93,
+      "missing": {},
+      "missing_total": 0,
+      "missing_critical": 0,
+      "missing_noncritical": 0,
+      "invalid": {
+        "date": 0,
+        "date_out_of_range": 0,
+        "coordinate": 0,
+        "coordinate_zero": 0,
+        "frp": 0,
+        "frp_zero": 0,
+        "confidence": 0,
+        "daynight": 0,
+        "type": 0,
+        "acq_time": 0
+      },
+      "distributions": {
+        "confidence": {
+          "n": 521945,
+          "h": 21095,
+          "l": 28723
+        },
+        "daynight": {
+          "D": 294620,
+          "N": 277143
+        },
+        "type": {}
+      },
+      "version_values": [
+        "2.0NRT"
+      ],
+      "satellite_values": [
+        "SNPP"
+      ],
+      "instrument_values": [
+        "SNPP"
+      ],
+      "checks": [
+        {
+          "check": "file_size",
+          "status": "PASS",
+          "expected": 48147253,
+          "actual": 48147253,
+          "note": "ukuran file dibandingkan dengan manifest"
+        },
+        {
+          "check": "header",
+          "status": "PASS",
+          "expected": "latitude,longitude,brightness,scan,track,acq_date,acq_time,satellite,instrument,confidence,version,bright_t31,frp,daynight",
+          "actual": "latitude,longitude,brightness,scan,track,acq_date,acq_time,satellite,instrument,confidence,version,bright_t31,frp,daynight",
+          "note": "urutan kolom sesuai"
+        },
+        {
+          "check": "n_columns",
+          "status": "PASS",
+          "expected": 14,
+          "actual": 14,
+          "note": ""
+        },
+        {
+          "check": "row_count",
+          "status": "PASS",
+          "expected": 571763,
+          "actual": 571763,
+          "note": "jumlah baris dibandingkan dengan manifest"
+        },
+        {
+          "check": "field_count",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "baris dengan jumlah field tidak sama dengan header"
+        },
+        {
+          "check": "missing_critical",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "kolom kritis: latitude, longitude, acq_date, acq_time, confidence, frp, daynight"
+        },
+        {
+          "check": "missing_noncritical",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "kolom non-kritis: brightness, scan, track, satellite, instrument, version, bright_t31, type"
+        },
+        {
+          "check": "invalid_date",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "tanggal tidak dapat diparsing sebagai YYYY-MM-DD"
+        },
+        {
+          "check": "date_out_of_range",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "tahun di luar rentang proyek 2012-2026"
+        },
+        {
+          "check": "date_range_manifest",
+          "status": "PASS",
+          "expected": "2026-08-01..2026-11-02",
+          "actual": "2026-08-01..2026-11-02",
+          "note": "rentang tanggal aktual dibandingkan manifest"
+        },
+        {
+          "check": "invalid_coordinate",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "koordinat non-numerik, non-finite, atau di luar -90..90 / -180..180"
+        },
+        {
+          "check": "coordinate_zero",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "koordinat (0,0) mencurigakan; bukan aturan keras"
+        },
+        {
+          "check": "invalid_frp",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "FRP non-numerik, non-finite, atau negatif"
+        },
+        {
+          "check": "frp_zero",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "FRP bernilai 0; bukan pelanggaran sintaks, ambang minimum tidak diverifikasi"
+        },
+        {
+          "check": "invalid_confidence",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "nilai di luar {l,n,h}"
+        },
+        {
+          "check": "invalid_daynight",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "nilai di luar {D,N}"
+        },
+        {
+          "check": "type_presence",
+          "status": "PASS",
+          "expected": "tidak ada (NRT)",
+          "actual": "tidak ada",
+          "note": "type wajib untuk archive; tidak wajib untuk NRT"
+        },
+        {
+          "check": "invalid_type",
+          "status": "NA",
+          "expected": "tidak tersedia",
+          "actual": "tidak tersedia",
+          "note": "kolom type tidak ada (NRT); validasi type dilewati"
+        },
+        {
+          "check": "invalid_acq_time",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "format HHMM 4 digit; zona waktu belum diverifikasi"
+        },
+        {
+          "check": "version_values",
+          "status": "PASS",
+          "expected": "2.0NRT",
+          "actual": "2.0NRT",
+          "note": "versi produk di dalam file"
+        },
+        {
+          "check": "satellite_values",
+          "status": "PASS",
+          "expected": "SNPP",
+          "actual": "SNPP",
+          "note": "nilai sensor/instrumen di dalam file"
+        },
+        {
+          "check": "instrument_values",
+          "status": "PASS",
+          "expected": "SNPP",
+          "actual": "SNPP",
+          "note": "nilai sensor/instrumen di dalam file"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "dataset_id": "MY-archive-838165",
+      "country_code": "MY",
+      "country_name": "Malaysia",
+      "feed": "archive",
+      "area_code": "838165",
+      "path_local": "data_asia_tenggara/Malaysia/fire_archive_SV-C2_838165.csv",
+      "path_hdfs": "/karhutla/raw/asean/malaysia/fire_archive_SV-C2_838165.csv",
+      "status": "WARNING",
+      "rows_manifest": 224485,
+      "rows_actual": 224485,
+      "bytes_manifest": 18028691,
+      "bytes_actual": 18028691,
+      "n_columns": 15,
+      "has_type": true,
+      "date_min": "2012-01-20",
+      "date_max": "2026-07-31",
+      "distinct_dates": 5092,
+      "missing": {},
+      "missing_total": 0,
+      "missing_critical": 0,
+      "missing_noncritical": 0,
+      "invalid": {
+        "date": 0,
+        "date_out_of_range": 0,
+        "coordinate": 0,
+        "coordinate_zero": 0,
+        "frp": 0,
+        "frp_zero": 4,
+        "confidence": 0,
+        "daynight": 0,
+        "type": 0,
+        "acq_time": 0
+      },
+      "distributions": {
+        "confidence": {
+          "n": 209783,
+          "l": 9445,
+          "h": 5257
+        },
+        "daynight": {
+          "D": 146972,
+          "N": 77513
+        },
+        "type": {
+          "0": 200884,
+          "2": 23100,
+          "3": 501
+        }
+      },
+      "version_values": [
+        "2"
+      ],
+      "satellite_values": [
+        "SNPP"
+      ],
+      "instrument_values": [
+        "SNPP"
+      ],
+      "checks": [
+        {
+          "check": "file_size",
+          "status": "PASS",
+          "expected": 18028691,
+          "actual": 18028691,
+          "note": "ukuran file dibandingkan dengan manifest"
+        },
+        {
+          "check": "header",
+          "status": "PASS",
+          "expected": "latitude,longitude,brightness,scan,track,acq_date,acq_time,satellite,instrument,confidence,version,bright_t31,frp,daynight,type",
+          "actual": "latitude,longitude,brightness,scan,track,acq_date,acq_time,satellite,instrument,confidence,version,bright_t31,frp,daynight,type",
+          "note": "urutan kolom sesuai"
+        },
+        {
+          "check": "n_columns",
+          "status": "PASS",
+          "expected": 15,
+          "actual": 15,
+          "note": ""
+        },
+        {
+          "check": "row_count",
+          "status": "PASS",
+          "expected": 224485,
+          "actual": 224485,
+          "note": "jumlah baris dibandingkan dengan manifest"
+        },
+        {
+          "check": "field_count",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "baris dengan jumlah field tidak sama dengan header"
+        },
+        {
+          "check": "missing_critical",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "kolom kritis: latitude, longitude, acq_date, acq_time, confidence, frp, daynight"
+        },
+        {
+          "check": "missing_noncritical",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "kolom non-kritis: brightness, scan, track, satellite, instrument, version, bright_t31, type"
+        },
+        {
+          "check": "invalid_date",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "tanggal tidak dapat diparsing sebagai YYYY-MM-DD"
+        },
+        {
+          "check": "date_out_of_range",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "tahun di luar rentang proyek 2012-2026"
+        },
+        {
+          "check": "date_range_manifest",
+          "status": "PASS",
+          "expected": "2012-01-20..2026-07-31",
+          "actual": "2012-01-20..2026-07-31",
+          "note": "rentang tanggal aktual dibandingkan manifest"
+        },
+        {
+          "check": "invalid_coordinate",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "koordinat non-numerik, non-finite, atau di luar -90..90 / -180..180"
+        },
+        {
+          "check": "coordinate_zero",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "koordinat (0,0) mencurigakan; bukan aturan keras"
+        },
+        {
+          "check": "invalid_frp",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "FRP non-numerik, non-finite, atau negatif"
+        },
+        {
+          "check": "frp_zero",
+          "status": "WARNING",
+          "expected": 0,
+          "actual": 4,
+          "note": "FRP bernilai 0; bukan pelanggaran sintaks, ambang minimum tidak diverifikasi"
+        },
+        {
+          "check": "invalid_confidence",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "nilai di luar {l,n,h}"
+        },
+        {
+          "check": "invalid_daynight",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "nilai di luar {D,N}"
+        },
+        {
+          "check": "type_presence",
+          "status": "PASS",
+          "expected": "ada",
+          "actual": "ada",
+          "note": "type wajib untuk archive; tidak wajib untuk NRT"
+        },
+        {
+          "check": "invalid_type",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "nilai di luar {0,1,2,3}"
+        },
+        {
+          "check": "invalid_acq_time",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "format HHMM 4 digit; zona waktu belum diverifikasi"
+        },
+        {
+          "check": "version_values",
+          "status": "PASS",
+          "expected": "2",
+          "actual": "2",
+          "note": "versi produk di dalam file"
+        },
+        {
+          "check": "satellite_values",
+          "status": "PASS",
+          "expected": "SNPP",
+          "actual": "SNPP",
+          "note": "nilai sensor/instrumen di dalam file"
+        },
+        {
+          "check": "instrument_values",
+          "status": "PASS",
+          "expected": "SNPP",
+          "actual": "SNPP",
+          "note": "nilai sensor/instrumen di dalam file"
+        }
+      ],
+      "notes": [
+        "frp_zero: 4 (FRP bernilai 0; bukan pelanggaran sintaks, ambang minimum tidak diverifikasi)"
+      ]
+    },
+    {
+      "dataset_id": "MY-nrt-838165",
+      "country_code": "MY",
+      "country_name": "Malaysia",
+      "feed": "nrt",
+      "area_code": "838165",
+      "path_local": "data_asia_tenggara/Malaysia/fire_nrt_SV-C2_838165.csv",
+      "path_hdfs": "/karhutla/raw/asean/malaysia/fire_nrt_SV-C2_838165.csv",
+      "status": "PASS",
+      "rows_manifest": 3243,
+      "rows_actual": 3243,
+      "bytes_manifest": 270322,
+      "bytes_actual": 270322,
+      "n_columns": 14,
+      "has_type": false,
+      "date_min": "2026-08-01",
+      "date_max": "2026-11-02",
+      "distinct_dates": 90,
+      "missing": {},
+      "missing_total": 0,
+      "missing_critical": 0,
+      "missing_noncritical": 0,
+      "invalid": {
+        "date": 0,
+        "date_out_of_range": 0,
+        "coordinate": 0,
+        "coordinate_zero": 0,
+        "frp": 0,
+        "frp_zero": 0,
+        "confidence": 0,
+        "daynight": 0,
+        "type": 0,
+        "acq_time": 0
+      },
+      "distributions": {
+        "confidence": {
+          "n": 3074,
+          "l": 101,
+          "h": 68
+        },
+        "daynight": {
+          "D": 2105,
+          "N": 1138
+        },
+        "type": {}
+      },
+      "version_values": [
+        "2.0NRT"
+      ],
+      "satellite_values": [
+        "SNPP"
+      ],
+      "instrument_values": [
+        "SNPP"
+      ],
+      "checks": [
+        {
+          "check": "file_size",
+          "status": "PASS",
+          "expected": 270322,
+          "actual": 270322,
+          "note": "ukuran file dibandingkan dengan manifest"
+        },
+        {
+          "check": "header",
+          "status": "PASS",
+          "expected": "latitude,longitude,brightness,scan,track,acq_date,acq_time,satellite,instrument,confidence,version,bright_t31,frp,daynight",
+          "actual": "latitude,longitude,brightness,scan,track,acq_date,acq_time,satellite,instrument,confidence,version,bright_t31,frp,daynight",
+          "note": "urutan kolom sesuai"
+        },
+        {
+          "check": "n_columns",
+          "status": "PASS",
+          "expected": 14,
+          "actual": 14,
+          "note": ""
+        },
+        {
+          "check": "row_count",
+          "status": "PASS",
+          "expected": 3243,
+          "actual": 3243,
+          "note": "jumlah baris dibandingkan dengan manifest"
+        },
+        {
+          "check": "field_count",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "baris dengan jumlah field tidak sama dengan header"
+        },
+        {
+          "check": "missing_critical",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "kolom kritis: latitude, longitude, acq_date, acq_time, confidence, frp, daynight"
+        },
+        {
+          "check": "missing_noncritical",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "kolom non-kritis: brightness, scan, track, satellite, instrument, version, bright_t31, type"
+        },
+        {
+          "check": "invalid_date",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "tanggal tidak dapat diparsing sebagai YYYY-MM-DD"
+        },
+        {
+          "check": "date_out_of_range",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "tahun di luar rentang proyek 2012-2026"
+        },
+        {
+          "check": "date_range_manifest",
+          "status": "PASS",
+          "expected": "2026-08-01..2026-11-02",
+          "actual": "2026-08-01..2026-11-02",
+          "note": "rentang tanggal aktual dibandingkan manifest"
+        },
+        {
+          "check": "invalid_coordinate",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "koordinat non-numerik, non-finite, atau di luar -90..90 / -180..180"
+        },
+        {
+          "check": "coordinate_zero",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "koordinat (0,0) mencurigakan; bukan aturan keras"
+        },
+        {
+          "check": "invalid_frp",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "FRP non-numerik, non-finite, atau negatif"
+        },
+        {
+          "check": "frp_zero",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "FRP bernilai 0; bukan pelanggaran sintaks, ambang minimum tidak diverifikasi"
+        },
+        {
+          "check": "invalid_confidence",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "nilai di luar {l,n,h}"
+        },
+        {
+          "check": "invalid_daynight",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "nilai di luar {D,N}"
+        },
+        {
+          "check": "type_presence",
+          "status": "PASS",
+          "expected": "tidak ada (NRT)",
+          "actual": "tidak ada",
+          "note": "type wajib untuk archive; tidak wajib untuk NRT"
+        },
+        {
+          "check": "invalid_type",
+          "status": "NA",
+          "expected": "tidak tersedia",
+          "actual": "tidak tersedia",
+          "note": "kolom type tidak ada (NRT); validasi type dilewati"
+        },
+        {
+          "check": "invalid_acq_time",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "format HHMM 4 digit; zona waktu belum diverifikasi"
+        },
+        {
+          "check": "version_values",
+          "status": "PASS",
+          "expected": "2.0NRT",
+          "actual": "2.0NRT",
+          "note": "versi produk di dalam file"
+        },
+        {
+          "check": "satellite_values",
+          "status": "PASS",
+          "expected": "SNPP",
+          "actual": "SNPP",
+          "note": "nilai sensor/instrumen di dalam file"
+        },
+        {
+          "check": "instrument_values",
+          "status": "PASS",
+          "expected": "SNPP",
+          "actual": "SNPP",
+          "note": "nilai sensor/instrumen di dalam file"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "dataset_id": "MM-archive-838170",
+      "country_code": "MM",
+      "country_name": "Myanmar",
+      "feed": "archive",
+      "area_code": "838170",
+      "path_local": "data_asia_tenggara/Myanmar/fire_archive_SV-C2_838170.csv",
+      "path_hdfs": "/karhutla/raw/asean/myanmar/fire_archive_SV-C2_838170.csv",
+      "status": "WARNING",
+      "rows_manifest": 5144894,
+      "rows_actual": 5144894,
+      "bytes_manifest": 413081183,
+      "bytes_actual": 413081183,
+      "n_columns": 15,
+      "has_type": true,
+      "date_min": "2012-01-20",
+      "date_max": "2026-07-30",
+      "distinct_dates": 4509,
+      "missing": {},
+      "missing_total": 0,
+      "missing_critical": 0,
+      "missing_noncritical": 0,
+      "invalid": {
+        "date": 0,
+        "date_out_of_range": 0,
+        "coordinate": 0,
+        "coordinate_zero": 0,
+        "frp": 0,
+        "frp_zero": 733,
+        "confidence": 0,
+        "daynight": 0,
+        "type": 0,
+        "acq_time": 0
+      },
+      "distributions": {
+        "confidence": {
+          "n": 4142582,
+          "h": 224467,
+          "l": 777845
+        },
+        "daynight": {
+          "D": 3907338,
+          "N": 1237556
+        },
+        "type": {
+          "0": 5138316,
+          "3": 2347,
+          "2": 4231
+        }
+      },
+      "version_values": [
+        "2"
+      ],
+      "satellite_values": [
+        "SNPP"
+      ],
+      "instrument_values": [
+        "SNPP"
+      ],
+      "checks": [
+        {
+          "check": "file_size",
+          "status": "PASS",
+          "expected": 413081183,
+          "actual": 413081183,
+          "note": "ukuran file dibandingkan dengan manifest"
+        },
+        {
+          "check": "header",
+          "status": "PASS",
+          "expected": "latitude,longitude,brightness,scan,track,acq_date,acq_time,satellite,instrument,confidence,version,bright_t31,frp,daynight,type",
+          "actual": "latitude,longitude,brightness,scan,track,acq_date,acq_time,satellite,instrument,confidence,version,bright_t31,frp,daynight,type",
+          "note": "urutan kolom sesuai"
+        },
+        {
+          "check": "n_columns",
+          "status": "PASS",
+          "expected": 15,
+          "actual": 15,
+          "note": ""
+        },
+        {
+          "check": "row_count",
+          "status": "PASS",
+          "expected": 5144894,
+          "actual": 5144894,
+          "note": "jumlah baris dibandingkan dengan manifest"
+        },
+        {
+          "check": "field_count",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "baris dengan jumlah field tidak sama dengan header"
+        },
+        {
+          "check": "missing_critical",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "kolom kritis: latitude, longitude, acq_date, acq_time, confidence, frp, daynight"
+        },
+        {
+          "check": "missing_noncritical",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "kolom non-kritis: brightness, scan, track, satellite, instrument, version, bright_t31, type"
+        },
+        {
+          "check": "invalid_date",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "tanggal tidak dapat diparsing sebagai YYYY-MM-DD"
+        },
+        {
+          "check": "date_out_of_range",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "tahun di luar rentang proyek 2012-2026"
+        },
+        {
+          "check": "date_range_manifest",
+          "status": "PASS",
+          "expected": "2012-01-20..2026-07-30",
+          "actual": "2012-01-20..2026-07-30",
+          "note": "rentang tanggal aktual dibandingkan manifest"
+        },
+        {
+          "check": "invalid_coordinate",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "koordinat non-numerik, non-finite, atau di luar -90..90 / -180..180"
+        },
+        {
+          "check": "coordinate_zero",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "koordinat (0,0) mencurigakan; bukan aturan keras"
+        },
+        {
+          "check": "invalid_frp",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "FRP non-numerik, non-finite, atau negatif"
+        },
+        {
+          "check": "frp_zero",
+          "status": "WARNING",
+          "expected": 0,
+          "actual": 733,
+          "note": "FRP bernilai 0; bukan pelanggaran sintaks, ambang minimum tidak diverifikasi"
+        },
+        {
+          "check": "invalid_confidence",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "nilai di luar {l,n,h}"
+        },
+        {
+          "check": "invalid_daynight",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "nilai di luar {D,N}"
+        },
+        {
+          "check": "type_presence",
+          "status": "PASS",
+          "expected": "ada",
+          "actual": "ada",
+          "note": "type wajib untuk archive; tidak wajib untuk NRT"
+        },
+        {
+          "check": "invalid_type",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "nilai di luar {0,1,2,3}"
+        },
+        {
+          "check": "invalid_acq_time",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "format HHMM 4 digit; zona waktu belum diverifikasi"
+        },
+        {
+          "check": "version_values",
+          "status": "PASS",
+          "expected": "2",
+          "actual": "2",
+          "note": "versi produk di dalam file"
+        },
+        {
+          "check": "satellite_values",
+          "status": "PASS",
+          "expected": "SNPP",
+          "actual": "SNPP",
+          "note": "nilai sensor/instrumen di dalam file"
+        },
+        {
+          "check": "instrument_values",
+          "status": "PASS",
+          "expected": "SNPP",
+          "actual": "SNPP",
+          "note": "nilai sensor/instrumen di dalam file"
+        }
+      ],
+      "notes": [
+        "frp_zero: 733 (FRP bernilai 0; bukan pelanggaran sintaks, ambang minimum tidak diverifikasi)"
+      ]
+    },
+    {
+      "dataset_id": "MM-nrt-838170",
+      "country_code": "MM",
+      "country_name": "Myanmar",
+      "feed": "nrt",
+      "area_code": "838170",
+      "path_local": "data_asia_tenggara/Myanmar/fire_nrt_SV-C2_838170.csv",
+      "path_hdfs": "/karhutla/raw/asean/myanmar/fire_nrt_SV-C2_838170.csv",
+      "status": "PASS",
+      "rows_manifest": 1249,
+      "rows_actual": 1249,
+      "bytes_manifest": 104108,
+      "bytes_actual": 104108,
+      "n_columns": 14,
+      "has_type": false,
+      "date_min": "2026-08-02",
+      "date_max": "2026-11-01",
+      "distinct_dates": 73,
+      "missing": {},
+      "missing_total": 0,
+      "missing_critical": 0,
+      "missing_noncritical": 0,
+      "invalid": {
+        "date": 0,
+        "date_out_of_range": 0,
+        "coordinate": 0,
+        "coordinate_zero": 0,
+        "frp": 0,
+        "frp_zero": 0,
+        "confidence": 0,
+        "daynight": 0,
+        "type": 0,
+        "acq_time": 0
+      },
+      "distributions": {
+        "confidence": {
+          "n": 1186,
+          "h": 11,
+          "l": 52
+        },
+        "daynight": {
+          "D": 1077,
+          "N": 172
+        },
+        "type": {}
+      },
+      "version_values": [
+        "2.0NRT"
+      ],
+      "satellite_values": [
+        "SNPP"
+      ],
+      "instrument_values": [
+        "SNPP"
+      ],
+      "checks": [
+        {
+          "check": "file_size",
+          "status": "PASS",
+          "expected": 104108,
+          "actual": 104108,
+          "note": "ukuran file dibandingkan dengan manifest"
+        },
+        {
+          "check": "header",
+          "status": "PASS",
+          "expected": "latitude,longitude,brightness,scan,track,acq_date,acq_time,satellite,instrument,confidence,version,bright_t31,frp,daynight",
+          "actual": "latitude,longitude,brightness,scan,track,acq_date,acq_time,satellite,instrument,confidence,version,bright_t31,frp,daynight",
+          "note": "urutan kolom sesuai"
+        },
+        {
+          "check": "n_columns",
+          "status": "PASS",
+          "expected": 14,
+          "actual": 14,
+          "note": ""
+        },
+        {
+          "check": "row_count",
+          "status": "PASS",
+          "expected": 1249,
+          "actual": 1249,
+          "note": "jumlah baris dibandingkan dengan manifest"
+        },
+        {
+          "check": "field_count",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "baris dengan jumlah field tidak sama dengan header"
+        },
+        {
+          "check": "missing_critical",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "kolom kritis: latitude, longitude, acq_date, acq_time, confidence, frp, daynight"
+        },
+        {
+          "check": "missing_noncritical",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "kolom non-kritis: brightness, scan, track, satellite, instrument, version, bright_t31, type"
+        },
+        {
+          "check": "invalid_date",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "tanggal tidak dapat diparsing sebagai YYYY-MM-DD"
+        },
+        {
+          "check": "date_out_of_range",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "tahun di luar rentang proyek 2012-2026"
+        },
+        {
+          "check": "date_range_manifest",
+          "status": "PASS",
+          "expected": "2026-08-02..2026-11-01",
+          "actual": "2026-08-02..2026-11-01",
+          "note": "rentang tanggal aktual dibandingkan manifest"
+        },
+        {
+          "check": "invalid_coordinate",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "koordinat non-numerik, non-finite, atau di luar -90..90 / -180..180"
+        },
+        {
+          "check": "coordinate_zero",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "koordinat (0,0) mencurigakan; bukan aturan keras"
+        },
+        {
+          "check": "invalid_frp",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "FRP non-numerik, non-finite, atau negatif"
+        },
+        {
+          "check": "frp_zero",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "FRP bernilai 0; bukan pelanggaran sintaks, ambang minimum tidak diverifikasi"
+        },
+        {
+          "check": "invalid_confidence",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "nilai di luar {l,n,h}"
+        },
+        {
+          "check": "invalid_daynight",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "nilai di luar {D,N}"
+        },
+        {
+          "check": "type_presence",
+          "status": "PASS",
+          "expected": "tidak ada (NRT)",
+          "actual": "tidak ada",
+          "note": "type wajib untuk archive; tidak wajib untuk NRT"
+        },
+        {
+          "check": "invalid_type",
+          "status": "NA",
+          "expected": "tidak tersedia",
+          "actual": "tidak tersedia",
+          "note": "kolom type tidak ada (NRT); validasi type dilewati"
+        },
+        {
+          "check": "invalid_acq_time",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "format HHMM 4 digit; zona waktu belum diverifikasi"
+        },
+        {
+          "check": "version_values",
+          "status": "PASS",
+          "expected": "2.0NRT",
+          "actual": "2.0NRT",
+          "note": "versi produk di dalam file"
+        },
+        {
+          "check": "satellite_values",
+          "status": "PASS",
+          "expected": "SNPP",
+          "actual": "SNPP",
+          "note": "nilai sensor/instrumen di dalam file"
+        },
+        {
+          "check": "instrument_values",
+          "status": "PASS",
+          "expected": "SNPP",
+          "actual": "SNPP",
+          "note": "nilai sensor/instrumen di dalam file"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "dataset_id": "PH-archive-838168",
+      "country_code": "PH",
+      "country_name": "Filipina",
+      "feed": "archive",
+      "area_code": "838168",
+      "path_local": "data_asia_tenggara/Philippines/fire_archive_SV-C2_838168.csv",
+      "path_hdfs": "/karhutla/raw/asean/philippines/fire_archive_SV-C2_838168.csv",
+      "status": "PASS",
+      "rows_manifest": 459570,
+      "rows_actual": 459570,
+      "bytes_manifest": 37209509,
+      "bytes_actual": 37209509,
+      "n_columns": 15,
+      "has_type": true,
+      "date_min": "2012-01-20",
+      "date_max": "2026-07-31",
+      "distinct_dates": 5046,
+      "missing": {},
+      "missing_total": 0,
+      "missing_critical": 0,
+      "missing_noncritical": 0,
+      "invalid": {
+        "date": 0,
+        "date_out_of_range": 0,
+        "coordinate": 0,
+        "coordinate_zero": 0,
+        "frp": 0,
+        "frp_zero": 0,
+        "confidence": 0,
+        "daynight": 0,
+        "type": 0,
+        "acq_time": 0
+      },
+      "distributions": {
+        "confidence": {
+          "n": 410202,
+          "l": 35869,
+          "h": 13499
+        },
+        "daynight": {
+          "D": 389344,
+          "N": 70226
+        },
+        "type": {
+          "0": 443156,
+          "2": 6646,
+          "3": 3563,
+          "1": 6205
+        }
+      },
+      "version_values": [
+        "2"
+      ],
+      "satellite_values": [
+        "SNPP"
+      ],
+      "instrument_values": [
+        "SNPP"
+      ],
+      "checks": [
+        {
+          "check": "file_size",
+          "status": "PASS",
+          "expected": 37209509,
+          "actual": 37209509,
+          "note": "ukuran file dibandingkan dengan manifest"
+        },
+        {
+          "check": "header",
+          "status": "PASS",
+          "expected": "latitude,longitude,brightness,scan,track,acq_date,acq_time,satellite,instrument,confidence,version,bright_t31,frp,daynight,type",
+          "actual": "latitude,longitude,brightness,scan,track,acq_date,acq_time,satellite,instrument,confidence,version,bright_t31,frp,daynight,type",
+          "note": "urutan kolom sesuai"
+        },
+        {
+          "check": "n_columns",
+          "status": "PASS",
+          "expected": 15,
+          "actual": 15,
+          "note": ""
+        },
+        {
+          "check": "row_count",
+          "status": "PASS",
+          "expected": 459570,
+          "actual": 459570,
+          "note": "jumlah baris dibandingkan dengan manifest"
+        },
+        {
+          "check": "field_count",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "baris dengan jumlah field tidak sama dengan header"
+        },
+        {
+          "check": "missing_critical",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "kolom kritis: latitude, longitude, acq_date, acq_time, confidence, frp, daynight"
+        },
+        {
+          "check": "missing_noncritical",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "kolom non-kritis: brightness, scan, track, satellite, instrument, version, bright_t31, type"
+        },
+        {
+          "check": "invalid_date",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "tanggal tidak dapat diparsing sebagai YYYY-MM-DD"
+        },
+        {
+          "check": "date_out_of_range",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "tahun di luar rentang proyek 2012-2026"
+        },
+        {
+          "check": "date_range_manifest",
+          "status": "PASS",
+          "expected": "2012-01-20..2026-07-31",
+          "actual": "2012-01-20..2026-07-31",
+          "note": "rentang tanggal aktual dibandingkan manifest"
+        },
+        {
+          "check": "invalid_coordinate",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "koordinat non-numerik, non-finite, atau di luar -90..90 / -180..180"
+        },
+        {
+          "check": "coordinate_zero",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "koordinat (0,0) mencurigakan; bukan aturan keras"
+        },
+        {
+          "check": "invalid_frp",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "FRP non-numerik, non-finite, atau negatif"
+        },
+        {
+          "check": "frp_zero",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "FRP bernilai 0; bukan pelanggaran sintaks, ambang minimum tidak diverifikasi"
+        },
+        {
+          "check": "invalid_confidence",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "nilai di luar {l,n,h}"
+        },
+        {
+          "check": "invalid_daynight",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "nilai di luar {D,N}"
+        },
+        {
+          "check": "type_presence",
+          "status": "PASS",
+          "expected": "ada",
+          "actual": "ada",
+          "note": "type wajib untuk archive; tidak wajib untuk NRT"
+        },
+        {
+          "check": "invalid_type",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "nilai di luar {0,1,2,3}"
+        },
+        {
+          "check": "invalid_acq_time",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "format HHMM 4 digit; zona waktu belum diverifikasi"
+        },
+        {
+          "check": "version_values",
+          "status": "PASS",
+          "expected": "2",
+          "actual": "2",
+          "note": "versi produk di dalam file"
+        },
+        {
+          "check": "satellite_values",
+          "status": "PASS",
+          "expected": "SNPP",
+          "actual": "SNPP",
+          "note": "nilai sensor/instrumen di dalam file"
+        },
+        {
+          "check": "instrument_values",
+          "status": "PASS",
+          "expected": "SNPP",
+          "actual": "SNPP",
+          "note": "nilai sensor/instrumen di dalam file"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "dataset_id": "PH-nrt-838168",
+      "country_code": "PH",
+      "country_name": "Filipina",
+      "feed": "nrt",
+      "area_code": "838168",
+      "path_local": "data_asia_tenggara/Philippines/fire_nrt_SV-C2_838168.csv",
+      "path_hdfs": "/karhutla/raw/asean/philippines/fire_nrt_SV-C2_838168.csv",
+      "status": "PASS",
+      "rows_manifest": 2779,
+      "rows_actual": 2779,
+      "bytes_manifest": 232787,
+      "bytes_actual": 232787,
+      "n_columns": 14,
+      "has_type": false,
+      "date_min": "2026-08-01",
+      "date_max": "2026-11-02",
+      "distinct_dates": 93,
+      "missing": {},
+      "missing_total": 0,
+      "missing_critical": 0,
+      "missing_noncritical": 0,
+      "invalid": {
+        "date": 0,
+        "date_out_of_range": 0,
+        "coordinate": 0,
+        "coordinate_zero": 0,
+        "frp": 0,
+        "frp_zero": 0,
+        "confidence": 0,
+        "daynight": 0,
+        "type": 0,
+        "acq_time": 0
+      },
+      "distributions": {
+        "confidence": {
+          "n": 2584,
+          "h": 43,
+          "l": 152
+        },
+        "daynight": {
+          "N": 432,
+          "D": 2347
+        },
+        "type": {}
+      },
+      "version_values": [
+        "2.0NRT"
+      ],
+      "satellite_values": [
+        "SNPP"
+      ],
+      "instrument_values": [
+        "SNPP"
+      ],
+      "checks": [
+        {
+          "check": "file_size",
+          "status": "PASS",
+          "expected": 232787,
+          "actual": 232787,
+          "note": "ukuran file dibandingkan dengan manifest"
+        },
+        {
+          "check": "header",
+          "status": "PASS",
+          "expected": "latitude,longitude,brightness,scan,track,acq_date,acq_time,satellite,instrument,confidence,version,bright_t31,frp,daynight",
+          "actual": "latitude,longitude,brightness,scan,track,acq_date,acq_time,satellite,instrument,confidence,version,bright_t31,frp,daynight",
+          "note": "urutan kolom sesuai"
+        },
+        {
+          "check": "n_columns",
+          "status": "PASS",
+          "expected": 14,
+          "actual": 14,
+          "note": ""
+        },
+        {
+          "check": "row_count",
+          "status": "PASS",
+          "expected": 2779,
+          "actual": 2779,
+          "note": "jumlah baris dibandingkan dengan manifest"
+        },
+        {
+          "check": "field_count",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "baris dengan jumlah field tidak sama dengan header"
+        },
+        {
+          "check": "missing_critical",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "kolom kritis: latitude, longitude, acq_date, acq_time, confidence, frp, daynight"
+        },
+        {
+          "check": "missing_noncritical",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "kolom non-kritis: brightness, scan, track, satellite, instrument, version, bright_t31, type"
+        },
+        {
+          "check": "invalid_date",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "tanggal tidak dapat diparsing sebagai YYYY-MM-DD"
+        },
+        {
+          "check": "date_out_of_range",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "tahun di luar rentang proyek 2012-2026"
+        },
+        {
+          "check": "date_range_manifest",
+          "status": "PASS",
+          "expected": "2026-08-01..2026-11-02",
+          "actual": "2026-08-01..2026-11-02",
+          "note": "rentang tanggal aktual dibandingkan manifest"
+        },
+        {
+          "check": "invalid_coordinate",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "koordinat non-numerik, non-finite, atau di luar -90..90 / -180..180"
+        },
+        {
+          "check": "coordinate_zero",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "koordinat (0,0) mencurigakan; bukan aturan keras"
+        },
+        {
+          "check": "invalid_frp",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "FRP non-numerik, non-finite, atau negatif"
+        },
+        {
+          "check": "frp_zero",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "FRP bernilai 0; bukan pelanggaran sintaks, ambang minimum tidak diverifikasi"
+        },
+        {
+          "check": "invalid_confidence",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "nilai di luar {l,n,h}"
+        },
+        {
+          "check": "invalid_daynight",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "nilai di luar {D,N}"
+        },
+        {
+          "check": "type_presence",
+          "status": "PASS",
+          "expected": "tidak ada (NRT)",
+          "actual": "tidak ada",
+          "note": "type wajib untuk archive; tidak wajib untuk NRT"
+        },
+        {
+          "check": "invalid_type",
+          "status": "NA",
+          "expected": "tidak tersedia",
+          "actual": "tidak tersedia",
+          "note": "kolom type tidak ada (NRT); validasi type dilewati"
+        },
+        {
+          "check": "invalid_acq_time",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "format HHMM 4 digit; zona waktu belum diverifikasi"
+        },
+        {
+          "check": "version_values",
+          "status": "PASS",
+          "expected": "2.0NRT",
+          "actual": "2.0NRT",
+          "note": "versi produk di dalam file"
+        },
+        {
+          "check": "satellite_values",
+          "status": "PASS",
+          "expected": "SNPP",
+          "actual": "SNPP",
+          "note": "nilai sensor/instrumen di dalam file"
+        },
+        {
+          "check": "instrument_values",
+          "status": "PASS",
+          "expected": "SNPP",
+          "actual": "SNPP",
+          "note": "nilai sensor/instrumen di dalam file"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "dataset_id": "TH-archive-838094",
+      "country_code": "TH",
+      "country_name": "Thailand",
+      "feed": "archive",
+      "area_code": "838094",
+      "path_local": "data_asia_tenggara/Thailand/fire_archive_SV-C2_838094.csv",
+      "path_hdfs": "/karhutla/raw/asean/thailand/fire_archive_SV-C2_838094.csv",
+      "status": "WARNING",
+      "rows_manifest": 2437813,
+      "rows_actual": 2437813,
+      "bytes_manifest": 196890954,
+      "bytes_actual": 196890954,
+      "n_columns": 15,
+      "has_type": true,
+      "date_min": "2012-01-20",
+      "date_max": "2026-07-31",
+      "distinct_dates": 4997,
+      "missing": {},
+      "missing_total": 0,
+      "missing_critical": 0,
+      "missing_noncritical": 0,
+      "invalid": {
+        "date": 0,
+        "date_out_of_range": 0,
+        "coordinate": 0,
+        "coordinate_zero": 0,
+        "frp": 0,
+        "frp_zero": 35,
+        "confidence": 0,
+        "daynight": 0,
+        "type": 0,
+        "acq_time": 0
+      },
+      "distributions": {
+        "confidence": {
+          "n": 2094010,
+          "l": 288023,
+          "h": 55780
+        },
+        "daynight": {
+          "D": 1598735,
+          "N": 839078
+        },
+        "type": {
+          "0": 2417280,
+          "2": 19364,
+          "3": 1169
+        }
+      },
+      "version_values": [
+        "2"
+      ],
+      "satellite_values": [
+        "SNPP"
+      ],
+      "instrument_values": [
+        "SNPP"
+      ],
+      "checks": [
+        {
+          "check": "file_size",
+          "status": "PASS",
+          "expected": 196890954,
+          "actual": 196890954,
+          "note": "ukuran file dibandingkan dengan manifest"
+        },
+        {
+          "check": "header",
+          "status": "PASS",
+          "expected": "latitude,longitude,brightness,scan,track,acq_date,acq_time,satellite,instrument,confidence,version,bright_t31,frp,daynight,type",
+          "actual": "latitude,longitude,brightness,scan,track,acq_date,acq_time,satellite,instrument,confidence,version,bright_t31,frp,daynight,type",
+          "note": "urutan kolom sesuai"
+        },
+        {
+          "check": "n_columns",
+          "status": "PASS",
+          "expected": 15,
+          "actual": 15,
+          "note": ""
+        },
+        {
+          "check": "row_count",
+          "status": "PASS",
+          "expected": 2437813,
+          "actual": 2437813,
+          "note": "jumlah baris dibandingkan dengan manifest"
+        },
+        {
+          "check": "field_count",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "baris dengan jumlah field tidak sama dengan header"
+        },
+        {
+          "check": "missing_critical",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "kolom kritis: latitude, longitude, acq_date, acq_time, confidence, frp, daynight"
+        },
+        {
+          "check": "missing_noncritical",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "kolom non-kritis: brightness, scan, track, satellite, instrument, version, bright_t31, type"
+        },
+        {
+          "check": "invalid_date",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "tanggal tidak dapat diparsing sebagai YYYY-MM-DD"
+        },
+        {
+          "check": "date_out_of_range",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "tahun di luar rentang proyek 2012-2026"
+        },
+        {
+          "check": "date_range_manifest",
+          "status": "PASS",
+          "expected": "2012-01-20..2026-07-31",
+          "actual": "2012-01-20..2026-07-31",
+          "note": "rentang tanggal aktual dibandingkan manifest"
+        },
+        {
+          "check": "invalid_coordinate",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "koordinat non-numerik, non-finite, atau di luar -90..90 / -180..180"
+        },
+        {
+          "check": "coordinate_zero",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "koordinat (0,0) mencurigakan; bukan aturan keras"
+        },
+        {
+          "check": "invalid_frp",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "FRP non-numerik, non-finite, atau negatif"
+        },
+        {
+          "check": "frp_zero",
+          "status": "WARNING",
+          "expected": 0,
+          "actual": 35,
+          "note": "FRP bernilai 0; bukan pelanggaran sintaks, ambang minimum tidak diverifikasi"
+        },
+        {
+          "check": "invalid_confidence",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "nilai di luar {l,n,h}"
+        },
+        {
+          "check": "invalid_daynight",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "nilai di luar {D,N}"
+        },
+        {
+          "check": "type_presence",
+          "status": "PASS",
+          "expected": "ada",
+          "actual": "ada",
+          "note": "type wajib untuk archive; tidak wajib untuk NRT"
+        },
+        {
+          "check": "invalid_type",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "nilai di luar {0,1,2,3}"
+        },
+        {
+          "check": "invalid_acq_time",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "format HHMM 4 digit; zona waktu belum diverifikasi"
+        },
+        {
+          "check": "version_values",
+          "status": "PASS",
+          "expected": "2",
+          "actual": "2",
+          "note": "versi produk di dalam file"
+        },
+        {
+          "check": "satellite_values",
+          "status": "PASS",
+          "expected": "SNPP",
+          "actual": "SNPP",
+          "note": "nilai sensor/instrumen di dalam file"
+        },
+        {
+          "check": "instrument_values",
+          "status": "PASS",
+          "expected": "SNPP",
+          "actual": "SNPP",
+          "note": "nilai sensor/instrumen di dalam file"
+        }
+      ],
+      "notes": [
+        "frp_zero: 35 (FRP bernilai 0; bukan pelanggaran sintaks, ambang minimum tidak diverifikasi)"
+      ]
+    },
+    {
+      "dataset_id": "TH-nrt-838094",
+      "country_code": "TH",
+      "country_name": "Thailand",
+      "feed": "nrt",
+      "area_code": "838094",
+      "path_local": "data_asia_tenggara/Thailand/fire_nrt_SV-C2_838094.csv",
+      "path_hdfs": "/karhutla/raw/asean/thailand/fire_nrt_SV-C2_838094.csv",
+      "status": "PASS",
+      "rows_manifest": 1416,
+      "rows_actual": 1416,
+      "bytes_manifest": 119010,
+      "bytes_actual": 119010,
+      "n_columns": 14,
+      "has_type": false,
+      "date_min": "2026-08-01",
+      "date_max": "2026-11-01",
+      "distinct_dates": 86,
+      "missing": {},
+      "missing_total": 0,
+      "missing_critical": 0,
+      "missing_noncritical": 0,
+      "invalid": {
+        "date": 0,
+        "date_out_of_range": 0,
+        "coordinate": 0,
+        "coordinate_zero": 0,
+        "frp": 0,
+        "frp_zero": 0,
+        "confidence": 0,
+        "daynight": 0,
+        "type": 0,
+        "acq_time": 0
+      },
+      "distributions": {
+        "confidence": {
+          "n": 1389,
+          "h": 5,
+          "l": 22
+        },
+        "daynight": {
+          "D": 1215,
+          "N": 201
+        },
+        "type": {}
+      },
+      "version_values": [
+        "2.0NRT"
+      ],
+      "satellite_values": [
+        "SNPP"
+      ],
+      "instrument_values": [
+        "SNPP"
+      ],
+      "checks": [
+        {
+          "check": "file_size",
+          "status": "PASS",
+          "expected": 119010,
+          "actual": 119010,
+          "note": "ukuran file dibandingkan dengan manifest"
+        },
+        {
+          "check": "header",
+          "status": "PASS",
+          "expected": "latitude,longitude,brightness,scan,track,acq_date,acq_time,satellite,instrument,confidence,version,bright_t31,frp,daynight",
+          "actual": "latitude,longitude,brightness,scan,track,acq_date,acq_time,satellite,instrument,confidence,version,bright_t31,frp,daynight",
+          "note": "urutan kolom sesuai"
+        },
+        {
+          "check": "n_columns",
+          "status": "PASS",
+          "expected": 14,
+          "actual": 14,
+          "note": ""
+        },
+        {
+          "check": "row_count",
+          "status": "PASS",
+          "expected": 1416,
+          "actual": 1416,
+          "note": "jumlah baris dibandingkan dengan manifest"
+        },
+        {
+          "check": "field_count",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "baris dengan jumlah field tidak sama dengan header"
+        },
+        {
+          "check": "missing_critical",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "kolom kritis: latitude, longitude, acq_date, acq_time, confidence, frp, daynight"
+        },
+        {
+          "check": "missing_noncritical",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "kolom non-kritis: brightness, scan, track, satellite, instrument, version, bright_t31, type"
+        },
+        {
+          "check": "invalid_date",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "tanggal tidak dapat diparsing sebagai YYYY-MM-DD"
+        },
+        {
+          "check": "date_out_of_range",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "tahun di luar rentang proyek 2012-2026"
+        },
+        {
+          "check": "date_range_manifest",
+          "status": "PASS",
+          "expected": "2026-08-01..2026-11-01",
+          "actual": "2026-08-01..2026-11-01",
+          "note": "rentang tanggal aktual dibandingkan manifest"
+        },
+        {
+          "check": "invalid_coordinate",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "koordinat non-numerik, non-finite, atau di luar -90..90 / -180..180"
+        },
+        {
+          "check": "coordinate_zero",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "koordinat (0,0) mencurigakan; bukan aturan keras"
+        },
+        {
+          "check": "invalid_frp",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "FRP non-numerik, non-finite, atau negatif"
+        },
+        {
+          "check": "frp_zero",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "FRP bernilai 0; bukan pelanggaran sintaks, ambang minimum tidak diverifikasi"
+        },
+        {
+          "check": "invalid_confidence",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "nilai di luar {l,n,h}"
+        },
+        {
+          "check": "invalid_daynight",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "nilai di luar {D,N}"
+        },
+        {
+          "check": "type_presence",
+          "status": "PASS",
+          "expected": "tidak ada (NRT)",
+          "actual": "tidak ada",
+          "note": "type wajib untuk archive; tidak wajib untuk NRT"
+        },
+        {
+          "check": "invalid_type",
+          "status": "NA",
+          "expected": "tidak tersedia",
+          "actual": "tidak tersedia",
+          "note": "kolom type tidak ada (NRT); validasi type dilewati"
+        },
+        {
+          "check": "invalid_acq_time",
+          "status": "PASS",
+          "expected": 0,
+          "actual": 0,
+          "note": "format HHMM 4 digit; zona waktu belum diverifikasi"
+        },
+        {
+          "check": "version_values",
+          "status": "PASS",
+          "expected": "2.0NRT",
+          "actual": "2.0NRT",
+          "note": "versi produk di dalam file"
+        },
+        {
+          "check": "satellite_values",
+          "status": "PASS",
+          "expected": "SNPP",
+          "actual": "SNPP",
+          "note": "nilai sensor/instrumen di dalam file"
+        },
+        {
+          "check": "instrument_values",
+          "status": "PASS",
+          "expected": "SNPP",
+          "actual": "SNPP",
+          "note": "nilai sensor/instrumen di dalam file"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "gaps": [
+    {
+      "country_code": "ID",
+      "country_name": "Indonesia",
+      "archive_date_min": "2012-01-20",
+      "archive_date_max": "2026-07-31",
+      "archive_distinct_dates": 5254,
+      "nrt_date_min": "2026-08-01",
+      "nrt_date_max": "2026-11-02",
+      "nrt_distinct_dates": 93,
+      "gap_days": 0,
+      "overlap_days": 0,
+      "archive_partial_start": true,
+      "archive_partial_end": true,
+      "status": "PASS",
+      "note": "archive dan NRT bersambung tanpa gap"
+    },
+    {
+      "country_code": "MM",
+      "country_name": "Myanmar",
+      "archive_date_min": "2012-01-20",
+      "archive_date_max": "2026-07-30",
+      "archive_distinct_dates": 4509,
+      "nrt_date_min": "2026-08-02",
+      "nrt_date_max": "2026-11-01",
+      "nrt_distinct_dates": 73,
+      "gap_days": 2,
+      "overlap_days": 0,
+      "archive_partial_start": true,
+      "archive_partial_end": true,
+      "status": "WARNING",
+      "note": "ada 2 hari tanpa data di antara archive dan NRT"
+    },
+    {
+      "country_code": "MY",
+      "country_name": "Malaysia",
+      "archive_date_min": "2012-01-20",
+      "archive_date_max": "2026-07-31",
+      "archive_distinct_dates": 5092,
+      "nrt_date_min": "2026-08-01",
+      "nrt_date_max": "2026-11-02",
+      "nrt_distinct_dates": 90,
+      "gap_days": 0,
+      "overlap_days": 0,
+      "archive_partial_start": true,
+      "archive_partial_end": true,
+      "status": "PASS",
+      "note": "archive dan NRT bersambung tanpa gap"
+    },
+    {
+      "country_code": "PH",
+      "country_name": "Filipina",
+      "archive_date_min": "2012-01-20",
+      "archive_date_max": "2026-07-31",
+      "archive_distinct_dates": 5046,
+      "nrt_date_min": "2026-08-01",
+      "nrt_date_max": "2026-11-02",
+      "nrt_distinct_dates": 93,
+      "gap_days": 0,
+      "overlap_days": 0,
+      "archive_partial_start": true,
+      "archive_partial_end": true,
+      "status": "PASS",
+      "note": "archive dan NRT bersambung tanpa gap"
+    },
+    {
+      "country_code": "TH",
+      "country_name": "Thailand",
+      "archive_date_min": "2012-01-20",
+      "archive_date_max": "2026-07-31",
+      "archive_distinct_dates": 4997,
+      "nrt_date_min": "2026-08-01",
+      "nrt_date_max": "2026-11-01",
+      "nrt_distinct_dates": 86,
+      "gap_days": 0,
+      "overlap_days": 0,
+      "archive_partial_start": true,
+      "archive_partial_end": true,
+      "status": "PASS",
+      "note": "archive dan NRT bersambung tanpa gap"
+    }
+  ],
+  "findings": [
+    "ID-archive-837816 (WARNING): frp_zero: 123 (FRP bernilai 0; bukan pelanggaran sintaks, ambang minimum tidak diverifikasi)",
+    "MY-archive-838165 (WARNING): frp_zero: 4 (FRP bernilai 0; bukan pelanggaran sintaks, ambang minimum tidak diverifikasi)",
+    "MM-archive-838170 (WARNING): frp_zero: 733 (FRP bernilai 0; bukan pelanggaran sintaks, ambang minimum tidak diverifikasi)",
+    "TH-archive-838094 (WARNING): frp_zero: 35 (FRP bernilai 0; bukan pelanggaran sintaks, ambang minimum tidak diverifikasi)",
+    "MM archive/NRT (WARNING): gap=2 hari, overlap=0 hari | ada 2 hari tanpa data di antara archive dan NRT"
+  ],
+  "methodological_notes": [
+    "Archive memiliki 15 kolom termasuk type; NRT memiliki 14 kolom tanpa type.",
+    "Arti kode type (0/1/2/3) belum diverifikasi dari dokumentasi FIRMS pada tahap ini; validasi hanya memeriksa domain nilai.",
+    "Zona waktu acq_time (UTC vs lokal) belum diverifikasi.",
+    "Overlap yang dihitung adalah overlap rentang tanggal, bukan overlap spasial bounding box.",
+    "FRP diperiksa numerik dan non-negatif; satuan dan ambang fisik tidak divalidasi.",
+    "FRP bernilai 0 dicatat sebagai WARNING karena ambang minimum tidak diverifikasi, bukan dianggap error otomatis.",
+    "brightness, scan, track, dan bright_t31 belum divalidasi rentangnya pada tahap ini.",
+    "Tahun 2012 dan 2026 adalah periode parsial; jangan membandingkan total mentah dengan tahun penuh.",
+    "Jumlah hari unik adalah hari yang memiliki deteksi hotspot; hari tanpa deteksi tidak otomatis berarti data hilang."
+  ]
+}

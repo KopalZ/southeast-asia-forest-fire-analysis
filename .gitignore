@@ -1,0 +1,48 @@
+# ==============================================================================
+# Git Ignore Configuration - Southeast Asia Forest Fire Hotspot Analysis
+# ==============================================================================
+
+# Raw Large Datasets (~956.90 MiB) - Excluded from repository
+DL_FIRE_SV-C2_837806/
+DL_FIRE_SV-C2_837816/*.csv
+data_asia_tenggara/*/*.csv
+
+# Allow sample data and metadata
+!data/sample/*.csv
+!outputs/**/*.csv
+!baseline/**/*.csv
+
+# Temporary build, test, and intermediate working files
+laporan/build/
+laporan/backup/
+docs/_public_work.docx
+Laporan_Tugas_Big_Data_Revisi*.pdf
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# Virtual environments
+venv/
+.env/
+env/
+.venv/
+
+# Editor and OS specific files
+~$*
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# Local logs and temporary files
+*.tmp
+*.temp
+build_report.ps1
+generate_report.py

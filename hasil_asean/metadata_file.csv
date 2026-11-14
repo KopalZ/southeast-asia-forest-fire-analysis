@@ -1,0 +1,11 @@
+negara,jenis,path_hdfs,baris,kolom,tgl_awal,tgl_akhir,lat_min,lat_max,lon_min,lon_max,satelit_instrumen,sebaran_type
+indonesia,archive,/karhutla/raw/archive/fire_archive_SV-C2_837816.csv,3568824,15,2012-01-20,2026-07-31,-10.97676,5.8782,95.01992,140.9774,SNPP/SNPP,type0=3396415;type1=48217;type2=105595;type3=18597
+indonesia,nrt,/karhutla/raw/nrt/fire_nrt_SV-C2_837816.csv,571763,14,2026-08-01,2026-11-02,-10.90808,5.59956,95.24565,140.97745,SNPP/SNPP,tanpa kolom type
+malaysia,archive,/karhutla/raw/asean/malaysia/fire_archive_SV-C2_838165.csv,224485,15,2012-01-20,2026-07-31,0.85496,7.35384,99.69318,119.26263,SNPP/SNPP,type0=200884;type2=23100;type3=501
+malaysia,nrt,/karhutla/raw/asean/malaysia/fire_nrt_SV-C2_838165.csv,3243,14,2026-08-01,2026-11-02,0.88932,6.97574,100.37138,119.25977,SNPP/SNPP,tanpa kolom type
+myanmar,archive,/karhutla/raw/asean/myanmar/fire_archive_SV-C2_838170.csv,5144894,15,2012-01-20,2026-07-30,9.85164,28.34412,92.1775,101.1609,SNPP/SNPP,type0=5138316;type2=4231;type3=2347
+myanmar,nrt,/karhutla/raw/asean/myanmar/fire_nrt_SV-C2_838170.csv,1249,14,2026-08-02,2026-11-01,11.78242,28.09506,92.18768,100.52812,SNPP/SNPP,tanpa kolom type
+philippines,archive,/karhutla/raw/asean/philippines/fire_archive_SV-C2_838168.csv,459570,15,2012-01-20,2026-07-31,4.6706,20.82937,116.93593,126.59941,SNPP/SNPP,type0=443156;type1=6205;type2=6646;type3=3563
+philippines,nrt,/karhutla/raw/asean/philippines/fire_nrt_SV-C2_838168.csv,2779,14,2026-08-01,2026-11-02,5.09024,18.89149,117.42926,126.60167,SNPP/SNPP,tanpa kolom type
+thailand,archive,/karhutla/raw/asean/thailand/fire_archive_SV-C2_838094.csv,2437813,15,2012-01-20,2026-07-31,5.65368,20.44033,97.35231,105.64988,SNPP/SNPP,type0=2417280;type2=19364;type3=1169
+thailand,nrt,/karhutla/raw/asean/thailand/fire_nrt_SV-C2_838094.csv,1416,14,2026-08-01,2026-11-01,5.94559,20.39986,98.24861,105.41496,SNPP/SNPP,tanpa kolom type

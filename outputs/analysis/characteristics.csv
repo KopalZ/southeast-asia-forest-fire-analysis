@@ -1,0 +1,16 @@
+country_code,country_name,scope,detections,confidence_low,confidence_nominal,confidence_high,confidence_other,daynight_D,daynight_N,daynight_other,frp_sum,frp_mean,frp_zero_count,frp_negative_count,type_0,type_1,type_2,type_3,type_other,type_not_available,note
+ID,Indonesia,archive,3568824,217551,3229850,121423,0,2387560,1181264,0,29313550.1400,8.2138,123,0,3396415,48217,105595,18597,0,0,
+ID,Indonesia,nrt,571763,28723,521945,21095,0,294620,277143,0,4182118.3100,7.3144,0,0,,,,,,571763,kolom type tidak tersedia (NRT)
+ID,Indonesia,combined,4140587,246274,3751795,142518,0,2682180,1458407,0,33495668.4500,8.0896,123,0,3396415,48217,105595,18597,0,571763,type hanya dari porsi archive; NRT tidak punya kolom type
+MY,Malaysia,archive,224485,9445,209783,5257,0,146972,77513,0,1641395.3500,7.3118,4,0,200884,0,23100,501,0,0,
+MY,Malaysia,nrt,3243,101,3074,68,0,2105,1138,0,25969.3300,8.0078,0,0,,,,,,3243,kolom type tidak tersedia (NRT)
+MY,Malaysia,combined,227728,9546,212857,5325,0,149077,78651,0,1667364.6800,7.3217,4,0,200884,0,23100,501,0,3243,type hanya dari porsi archive; NRT tidak punya kolom type
+MM,Myanmar,archive,5144894,777845,4142582,224467,0,3907338,1237556,0,47869513.0900,9.3043,733,0,5138316,0,4231,2347,0,0,
+MM,Myanmar,nrt,1249,52,1186,11,0,1077,172,0,5221.2100,4.1803,0,0,,,,,,1249,kolom type tidak tersedia (NRT)
+MM,Myanmar,combined,5146143,777897,4143768,224478,0,3908415,1237728,0,47874734.3000,9.3030,733,0,5138316,0,4231,2347,0,1249,type hanya dari porsi archive; NRT tidak punya kolom type
+PH,Filipina,archive,459570,35869,410202,13499,0,389344,70226,0,3058332.4100,6.6548,0,0,443156,6205,6646,3563,0,0,
+PH,Filipina,nrt,2779,152,2584,43,0,2347,432,0,16127.6100,5.8034,0,0,,,,,,2779,kolom type tidak tersedia (NRT)
+PH,Filipina,combined,462349,36021,412786,13542,0,391691,70658,0,3074460.0200,6.6497,0,0,443156,6205,6646,3563,0,2779,type hanya dari porsi archive; NRT tidak punya kolom type
+TH,Thailand,archive,2437813,288023,2094010,55780,0,1598735,839078,0,12998562.9800,5.3321,35,0,2417280,0,19364,1169,0,0,
+TH,Thailand,nrt,1416,22,1389,5,0,1215,201,0,6159.5700,4.3500,0,0,,,,,,1416,kolom type tidak tersedia (NRT)
+TH,Thailand,combined,2439229,288045,2095399,55785,0,1599950,839279,0,13004722.5500,5.3315,35,0,2417280,0,19364,1169,0,1416,type hanya dari porsi archive; NRT tidak punya kolom type

@@ -1,0 +1,221 @@
+dataset_id,check,status,expected,actual,note
+ID-archive-837816,file_size,PASS,289294138,289294138,ukuran file dibandingkan dengan manifest
+ID-archive-837816,header,PASS,"latitude,longitude,brightness,scan,track,acq_date,acq_time,satellite,instrument,confidence,version,bright_t31,frp,daynight,type","latitude,longitude,brightness,scan,track,acq_date,acq_time,satellite,instrument,confidence,version,bright_t31,frp,daynight,type",urutan kolom sesuai
+ID-archive-837816,n_columns,PASS,15,15,
+ID-archive-837816,row_count,PASS,3568824,3568824,jumlah baris dibandingkan dengan manifest
+ID-archive-837816,field_count,PASS,0,0,baris dengan jumlah field tidak sama dengan header
+ID-archive-837816,missing_critical,PASS,0,0,"kolom kritis: latitude, longitude, acq_date, acq_time, confidence, frp, daynight"
+ID-archive-837816,missing_noncritical,PASS,0,0,"kolom non-kritis: brightness, scan, track, satellite, instrument, version, bright_t31, type"
+ID-archive-837816,invalid_date,PASS,0,0,tanggal tidak dapat diparsing sebagai YYYY-MM-DD
+ID-archive-837816,date_out_of_range,PASS,0,0,tahun di luar rentang proyek 2012-2026
+ID-archive-837816,date_range_manifest,PASS,2012-01-20..2026-07-31,2012-01-20..2026-07-31,rentang tanggal aktual dibandingkan manifest
+ID-archive-837816,invalid_coordinate,PASS,0,0,"koordinat non-numerik, non-finite, atau di luar -90..90 / -180..180"
+ID-archive-837816,coordinate_zero,PASS,0,0,"koordinat (0,0) mencurigakan; bukan aturan keras"
+ID-archive-837816,invalid_frp,PASS,0,0,"FRP non-numerik, non-finite, atau negatif"
+ID-archive-837816,frp_zero,WARNING,0,123,"FRP bernilai 0; bukan pelanggaran sintaks, ambang minimum tidak diverifikasi"
+ID-archive-837816,invalid_confidence,PASS,0,0,"nilai di luar {l,n,h}"
+ID-archive-837816,invalid_daynight,PASS,0,0,"nilai di luar {D,N}"
+ID-archive-837816,type_presence,PASS,ada,ada,type wajib untuk archive; tidak wajib untuk NRT
+ID-archive-837816,invalid_type,PASS,0,0,"nilai di luar {0,1,2,3}"
+ID-archive-837816,invalid_acq_time,PASS,0,0,format HHMM 4 digit; zona waktu belum diverifikasi
+ID-archive-837816,version_values,PASS,2,2,versi produk di dalam file
+ID-archive-837816,satellite_values,PASS,SNPP,SNPP,nilai sensor/instrumen di dalam file
+ID-archive-837816,instrument_values,PASS,SNPP,SNPP,nilai sensor/instrumen di dalam file
+ID-nrt-837816,file_size,PASS,48147253,48147253,ukuran file dibandingkan dengan manifest
+ID-nrt-837816,header,PASS,"latitude,longitude,brightness,scan,track,acq_date,acq_time,satellite,instrument,confidence,version,bright_t31,frp,daynight","latitude,longitude,brightness,scan,track,acq_date,acq_time,satellite,instrument,confidence,version,bright_t31,frp,daynight",urutan kolom sesuai
+ID-nrt-837816,n_columns,PASS,14,14,
+ID-nrt-837816,row_count,PASS,571763,571763,jumlah baris dibandingkan dengan manifest
+ID-nrt-837816,field_count,PASS,0,0,baris dengan jumlah field tidak sama dengan header
+ID-nrt-837816,missing_critical,PASS,0,0,"kolom kritis: latitude, longitude, acq_date, acq_time, confidence, frp, daynight"
+ID-nrt-837816,missing_noncritical,PASS,0,0,"kolom non-kritis: brightness, scan, track, satellite, instrument, version, bright_t31, type"
+ID-nrt-837816,invalid_date,PASS,0,0,tanggal tidak dapat diparsing sebagai YYYY-MM-DD
+ID-nrt-837816,date_out_of_range,PASS,0,0,tahun di luar rentang proyek 2012-2026
+ID-nrt-837816,date_range_manifest,PASS,2026-08-01..2026-11-02,2026-08-01..2026-11-02,rentang tanggal aktual dibandingkan manifest
+ID-nrt-837816,invalid_coordinate,PASS,0,0,"koordinat non-numerik, non-finite, atau di luar -90..90 / -180..180"
+ID-nrt-837816,coordinate_zero,PASS,0,0,"koordinat (0,0) mencurigakan; bukan aturan keras"
+ID-nrt-837816,invalid_frp,PASS,0,0,"FRP non-numerik, non-finite, atau negatif"
+ID-nrt-837816,frp_zero,PASS,0,0,"FRP bernilai 0; bukan pelanggaran sintaks, ambang minimum tidak diverifikasi"
+ID-nrt-837816,invalid_confidence,PASS,0,0,"nilai di luar {l,n,h}"
+ID-nrt-837816,invalid_daynight,PASS,0,0,"nilai di luar {D,N}"
+ID-nrt-837816,type_presence,PASS,tidak ada (NRT),tidak ada,type wajib untuk archive; tidak wajib untuk NRT
+ID-nrt-837816,invalid_type,NA,tidak tersedia,tidak tersedia,kolom type tidak ada (NRT); validasi type dilewati
+ID-nrt-837816,invalid_acq_time,PASS,0,0,format HHMM 4 digit; zona waktu belum diverifikasi
+ID-nrt-837816,version_values,PASS,2.0NRT,2.0NRT,versi produk di dalam file
+ID-nrt-837816,satellite_values,PASS,SNPP,SNPP,nilai sensor/instrumen di dalam file
+ID-nrt-837816,instrument_values,PASS,SNPP,SNPP,nilai sensor/instrumen di dalam file
+MY-archive-838165,file_size,PASS,18028691,18028691,ukuran file dibandingkan dengan manifest
+MY-archive-838165,header,PASS,"latitude,longitude,brightness,scan,track,acq_date,acq_time,satellite,instrument,confidence,version,bright_t31,frp,daynight,type","latitude,longitude,brightness,scan,track,acq_date,acq_time,satellite,instrument,confidence,version,bright_t31,frp,daynight,type",urutan kolom sesuai
+MY-archive-838165,n_columns,PASS,15,15,
+MY-archive-838165,row_count,PASS,224485,224485,jumlah baris dibandingkan dengan manifest
+MY-archive-838165,field_count,PASS,0,0,baris dengan jumlah field tidak sama dengan header
+MY-archive-838165,missing_critical,PASS,0,0,"kolom kritis: latitude, longitude, acq_date, acq_time, confidence, frp, daynight"
+MY-archive-838165,missing_noncritical,PASS,0,0,"kolom non-kritis: brightness, scan, track, satellite, instrument, version, bright_t31, type"
+MY-archive-838165,invalid_date,PASS,0,0,tanggal tidak dapat diparsing sebagai YYYY-MM-DD
+MY-archive-838165,date_out_of_range,PASS,0,0,tahun di luar rentang proyek 2012-2026
+MY-archive-838165,date_range_manifest,PASS,2012-01-20..2026-07-31,2012-01-20..2026-07-31,rentang tanggal aktual dibandingkan manifest
+MY-archive-838165,invalid_coordinate,PASS,0,0,"koordinat non-numerik, non-finite, atau di luar -90..90 / -180..180"
+MY-archive-838165,coordinate_zero,PASS,0,0,"koordinat (0,0) mencurigakan; bukan aturan keras"
+MY-archive-838165,invalid_frp,PASS,0,0,"FRP non-numerik, non-finite, atau negatif"
+MY-archive-838165,frp_zero,WARNING,0,4,"FRP bernilai 0; bukan pelanggaran sintaks, ambang minimum tidak diverifikasi"
+MY-archive-838165,invalid_confidence,PASS,0,0,"nilai di luar {l,n,h}"
+MY-archive-838165,invalid_daynight,PASS,0,0,"nilai di luar {D,N}"
+MY-archive-838165,type_presence,PASS,ada,ada,type wajib untuk archive; tidak wajib untuk NRT
+MY-archive-838165,invalid_type,PASS,0,0,"nilai di luar {0,1,2,3}"
+MY-archive-838165,invalid_acq_time,PASS,0,0,format HHMM 4 digit; zona waktu belum diverifikasi
+MY-archive-838165,version_values,PASS,2,2,versi produk di dalam file
+MY-archive-838165,satellite_values,PASS,SNPP,SNPP,nilai sensor/instrumen di dalam file
+MY-archive-838165,instrument_values,PASS,SNPP,SNPP,nilai sensor/instrumen di dalam file
+MY-nrt-838165,file_size,PASS,270322,270322,ukuran file dibandingkan dengan manifest
+MY-nrt-838165,header,PASS,"latitude,longitude,brightness,scan,track,acq_date,acq_time,satellite,instrument,confidence,version,bright_t31,frp,daynight","latitude,longitude,brightness,scan,track,acq_date,acq_time,satellite,instrument,confidence,version,bright_t31,frp,daynight",urutan kolom sesuai
+MY-nrt-838165,n_columns,PASS,14,14,
+MY-nrt-838165,row_count,PASS,3243,3243,jumlah baris dibandingkan dengan manifest
+MY-nrt-838165,field_count,PASS,0,0,baris dengan jumlah field tidak sama dengan header
+MY-nrt-838165,missing_critical,PASS,0,0,"kolom kritis: latitude, longitude, acq_date, acq_time, confidence, frp, daynight"
+MY-nrt-838165,missing_noncritical,PASS,0,0,"kolom non-kritis: brightness, scan, track, satellite, instrument, version, bright_t31, type"
+MY-nrt-838165,invalid_date,PASS,0,0,tanggal tidak dapat diparsing sebagai YYYY-MM-DD
+MY-nrt-838165,date_out_of_range,PASS,0,0,tahun di luar rentang proyek 2012-2026
+MY-nrt-838165,date_range_manifest,PASS,2026-08-01..2026-11-02,2026-08-01..2026-11-02,rentang tanggal aktual dibandingkan manifest
+MY-nrt-838165,invalid_coordinate,PASS,0,0,"koordinat non-numerik, non-finite, atau di luar -90..90 / -180..180"
+MY-nrt-838165,coordinate_zero,PASS,0,0,"koordinat (0,0) mencurigakan; bukan aturan keras"
+MY-nrt-838165,invalid_frp,PASS,0,0,"FRP non-numerik, non-finite, atau negatif"
+MY-nrt-838165,frp_zero,PASS,0,0,"FRP bernilai 0; bukan pelanggaran sintaks, ambang minimum tidak diverifikasi"
+MY-nrt-838165,invalid_confidence,PASS,0,0,"nilai di luar {l,n,h}"
+MY-nrt-838165,invalid_daynight,PASS,0,0,"nilai di luar {D,N}"
+MY-nrt-838165,type_presence,PASS,tidak ada (NRT),tidak ada,type wajib untuk archive; tidak wajib untuk NRT
+MY-nrt-838165,invalid_type,NA,tidak tersedia,tidak tersedia,kolom type tidak ada (NRT); validasi type dilewati
+MY-nrt-838165,invalid_acq_time,PASS,0,0,format HHMM 4 digit; zona waktu belum diverifikasi
+MY-nrt-838165,version_values,PASS,2.0NRT,2.0NRT,versi produk di dalam file
+MY-nrt-838165,satellite_values,PASS,SNPP,SNPP,nilai sensor/instrumen di dalam file
+MY-nrt-838165,instrument_values,PASS,SNPP,SNPP,nilai sensor/instrumen di dalam file
+MM-archive-838170,file_size,PASS,413081183,413081183,ukuran file dibandingkan dengan manifest
+MM-archive-838170,header,PASS,"latitude,longitude,brightness,scan,track,acq_date,acq_time,satellite,instrument,confidence,version,bright_t31,frp,daynight,type","latitude,longitude,brightness,scan,track,acq_date,acq_time,satellite,instrument,confidence,version,bright_t31,frp,daynight,type",urutan kolom sesuai
+MM-archive-838170,n_columns,PASS,15,15,
+MM-archive-838170,row_count,PASS,5144894,5144894,jumlah baris dibandingkan dengan manifest
+MM-archive-838170,field_count,PASS,0,0,baris dengan jumlah field tidak sama dengan header
+MM-archive-838170,missing_critical,PASS,0,0,"kolom kritis: latitude, longitude, acq_date, acq_time, confidence, frp, daynight"
+MM-archive-838170,missing_noncritical,PASS,0,0,"kolom non-kritis: brightness, scan, track, satellite, instrument, version, bright_t31, type"
+MM-archive-838170,invalid_date,PASS,0,0,tanggal tidak dapat diparsing sebagai YYYY-MM-DD
+MM-archive-838170,date_out_of_range,PASS,0,0,tahun di luar rentang proyek 2012-2026
+MM-archive-838170,date_range_manifest,PASS,2012-01-20..2026-07-30,2012-01-20..2026-07-30,rentang tanggal aktual dibandingkan manifest
+MM-archive-838170,invalid_coordinate,PASS,0,0,"koordinat non-numerik, non-finite, atau di luar -90..90 / -180..180"
+MM-archive-838170,coordinate_zero,PASS,0,0,"koordinat (0,0) mencurigakan; bukan aturan keras"
+MM-archive-838170,invalid_frp,PASS,0,0,"FRP non-numerik, non-finite, atau negatif"
+MM-archive-838170,frp_zero,WARNING,0,733,"FRP bernilai 0; bukan pelanggaran sintaks, ambang minimum tidak diverifikasi"
+MM-archive-838170,invalid_confidence,PASS,0,0,"nilai di luar {l,n,h}"
+MM-archive-838170,invalid_daynight,PASS,0,0,"nilai di luar {D,N}"
+MM-archive-838170,type_presence,PASS,ada,ada,type wajib untuk archive; tidak wajib untuk NRT
+MM-archive-838170,invalid_type,PASS,0,0,"nilai di luar {0,1,2,3}"
+MM-archive-838170,invalid_acq_time,PASS,0,0,format HHMM 4 digit; zona waktu belum diverifikasi
+MM-archive-838170,version_values,PASS,2,2,versi produk di dalam file
+MM-archive-838170,satellite_values,PASS,SNPP,SNPP,nilai sensor/instrumen di dalam file
+MM-archive-838170,instrument_values,PASS,SNPP,SNPP,nilai sensor/instrumen di dalam file
+MM-nrt-838170,file_size,PASS,104108,104108,ukuran file dibandingkan dengan manifest
+MM-nrt-838170,header,PASS,"latitude,longitude,brightness,scan,track,acq_date,acq_time,satellite,instrument,confidence,version,bright_t31,frp,daynight","latitude,longitude,brightness,scan,track,acq_date,acq_time,satellite,instrument,confidence,version,bright_t31,frp,daynight",urutan kolom sesuai
+MM-nrt-838170,n_columns,PASS,14,14,
+MM-nrt-838170,row_count,PASS,1249,1249,jumlah baris dibandingkan dengan manifest
+MM-nrt-838170,field_count,PASS,0,0,baris dengan jumlah field tidak sama dengan header
+MM-nrt-838170,missing_critical,PASS,0,0,"kolom kritis: latitude, longitude, acq_date, acq_time, confidence, frp, daynight"
+MM-nrt-838170,missing_noncritical,PASS,0,0,"kolom non-kritis: brightness, scan, track, satellite, instrument, version, bright_t31, type"
+MM-nrt-838170,invalid_date,PASS,0,0,tanggal tidak dapat diparsing sebagai YYYY-MM-DD
+MM-nrt-838170,date_out_of_range,PASS,0,0,tahun di luar rentang proyek 2012-2026
+MM-nrt-838170,date_range_manifest,PASS,2026-08-02..2026-11-01,2026-08-02..2026-11-01,rentang tanggal aktual dibandingkan manifest
+MM-nrt-838170,invalid_coordinate,PASS,0,0,"koordinat non-numerik, non-finite, atau di luar -90..90 / -180..180"
+MM-nrt-838170,coordinate_zero,PASS,0,0,"koordinat (0,0) mencurigakan; bukan aturan keras"
+MM-nrt-838170,invalid_frp,PASS,0,0,"FRP non-numerik, non-finite, atau negatif"
+MM-nrt-838170,frp_zero,PASS,0,0,"FRP bernilai 0; bukan pelanggaran sintaks, ambang minimum tidak diverifikasi"
+MM-nrt-838170,invalid_confidence,PASS,0,0,"nilai di luar {l,n,h}"
+MM-nrt-838170,invalid_daynight,PASS,0,0,"nilai di luar {D,N}"
+MM-nrt-838170,type_presence,PASS,tidak ada (NRT),tidak ada,type wajib untuk archive; tidak wajib untuk NRT
+MM-nrt-838170,invalid_type,NA,tidak tersedia,tidak tersedia,kolom type tidak ada (NRT); validasi type dilewati
+MM-nrt-838170,invalid_acq_time,PASS,0,0,format HHMM 4 digit; zona waktu belum diverifikasi
+MM-nrt-838170,version_values,PASS,2.0NRT,2.0NRT,versi produk di dalam file
+MM-nrt-838170,satellite_values,PASS,SNPP,SNPP,nilai sensor/instrumen di dalam file
+MM-nrt-838170,instrument_values,PASS,SNPP,SNPP,nilai sensor/instrumen di dalam file
+PH-archive-838168,file_size,PASS,37209509,37209509,ukuran file dibandingkan dengan manifest
+PH-archive-838168,header,PASS,"latitude,longitude,brightness,scan,track,acq_date,acq_time,satellite,instrument,confidence,version,bright_t31,frp,daynight,type","latitude,longitude,brightness,scan,track,acq_date,acq_time,satellite,instrument,confidence,version,bright_t31,frp,daynight,type",urutan kolom sesuai
+PH-archive-838168,n_columns,PASS,15,15,
+PH-archive-838168,row_count,PASS,459570,459570,jumlah baris dibandingkan dengan manifest
+PH-archive-838168,field_count,PASS,0,0,baris dengan jumlah field tidak sama dengan header
+PH-archive-838168,missing_critical,PASS,0,0,"kolom kritis: latitude, longitude, acq_date, acq_time, confidence, frp, daynight"
+PH-archive-838168,missing_noncritical,PASS,0,0,"kolom non-kritis: brightness, scan, track, satellite, instrument, version, bright_t31, type"
+PH-archive-838168,invalid_date,PASS,0,0,tanggal tidak dapat diparsing sebagai YYYY-MM-DD
+PH-archive-838168,date_out_of_range,PASS,0,0,tahun di luar rentang proyek 2012-2026
+PH-archive-838168,date_range_manifest,PASS,2012-01-20..2026-07-31,2012-01-20..2026-07-31,rentang tanggal aktual dibandingkan manifest
+PH-archive-838168,invalid_coordinate,PASS,0,0,"koordinat non-numerik, non-finite, atau di luar -90..90 / -180..180"
+PH-archive-838168,coordinate_zero,PASS,0,0,"koordinat (0,0) mencurigakan; bukan aturan keras"
+PH-archive-838168,invalid_frp,PASS,0,0,"FRP non-numerik, non-finite, atau negatif"
+PH-archive-838168,frp_zero,PASS,0,0,"FRP bernilai 0; bukan pelanggaran sintaks, ambang minimum tidak diverifikasi"
+PH-archive-838168,invalid_confidence,PASS,0,0,"nilai di luar {l,n,h}"
+PH-archive-838168,invalid_daynight,PASS,0,0,"nilai di luar {D,N}"
+PH-archive-838168,type_presence,PASS,ada,ada,type wajib untuk archive; tidak wajib untuk NRT
+PH-archive-838168,invalid_type,PASS,0,0,"nilai di luar {0,1,2,3}"
+PH-archive-838168,invalid_acq_time,PASS,0,0,format HHMM 4 digit; zona waktu belum diverifikasi
+PH-archive-838168,version_values,PASS,2,2,versi produk di dalam file
+PH-archive-838168,satellite_values,PASS,SNPP,SNPP,nilai sensor/instrumen di dalam file
+PH-archive-838168,instrument_values,PASS,SNPP,SNPP,nilai sensor/instrumen di dalam file
+PH-nrt-838168,file_size,PASS,232787,232787,ukuran file dibandingkan dengan manifest
+PH-nrt-838168,header,PASS,"latitude,longitude,brightness,scan,track,acq_date,acq_time,satellite,instrument,confidence,version,bright_t31,frp,daynight","latitude,longitude,brightness,scan,track,acq_date,acq_time,satellite,instrument,confidence,version,bright_t31,frp,daynight",urutan kolom sesuai
+PH-nrt-838168,n_columns,PASS,14,14,
+PH-nrt-838168,row_count,PASS,2779,2779,jumlah baris dibandingkan dengan manifest
+PH-nrt-838168,field_count,PASS,0,0,baris dengan jumlah field tidak sama dengan header
+PH-nrt-838168,missing_critical,PASS,0,0,"kolom kritis: latitude, longitude, acq_date, acq_time, confidence, frp, daynight"
+PH-nrt-838168,missing_noncritical,PASS,0,0,"kolom non-kritis: brightness, scan, track, satellite, instrument, version, bright_t31, type"
+PH-nrt-838168,invalid_date,PASS,0,0,tanggal tidak dapat diparsing sebagai YYYY-MM-DD
+PH-nrt-838168,date_out_of_range,PASS,0,0,tahun di luar rentang proyek 2012-2026
+PH-nrt-838168,date_range_manifest,PASS,2026-08-01..2026-11-02,2026-08-01..2026-11-02,rentang tanggal aktual dibandingkan manifest
+PH-nrt-838168,invalid_coordinate,PASS,0,0,"koordinat non-numerik, non-finite, atau di luar -90..90 / -180..180"
+PH-nrt-838168,coordinate_zero,PASS,0,0,"koordinat (0,0) mencurigakan; bukan aturan keras"
+PH-nrt-838168,invalid_frp,PASS,0,0,"FRP non-numerik, non-finite, atau negatif"
+PH-nrt-838168,frp_zero,PASS,0,0,"FRP bernilai 0; bukan pelanggaran sintaks, ambang minimum tidak diverifikasi"
+PH-nrt-838168,invalid_confidence,PASS,0,0,"nilai di luar {l,n,h}"
+PH-nrt-838168,invalid_daynight,PASS,0,0,"nilai di luar {D,N}"
+PH-nrt-838168,type_presence,PASS,tidak ada (NRT),tidak ada,type wajib untuk archive; tidak wajib untuk NRT
+PH-nrt-838168,invalid_type,NA,tidak tersedia,tidak tersedia,kolom type tidak ada (NRT); validasi type dilewati
+PH-nrt-838168,invalid_acq_time,PASS,0,0,format HHMM 4 digit; zona waktu belum diverifikasi
+PH-nrt-838168,version_values,PASS,2.0NRT,2.0NRT,versi produk di dalam file
+PH-nrt-838168,satellite_values,PASS,SNPP,SNPP,nilai sensor/instrumen di dalam file
+PH-nrt-838168,instrument_values,PASS,SNPP,SNPP,nilai sensor/instrumen di dalam file
+TH-archive-838094,file_size,PASS,196890954,196890954,ukuran file dibandingkan dengan manifest
+TH-archive-838094,header,PASS,"latitude,longitude,brightness,scan,track,acq_date,acq_time,satellite,instrument,confidence,version,bright_t31,frp,daynight,type","latitude,longitude,brightness,scan,track,acq_date,acq_time,satellite,instrument,confidence,version,bright_t31,frp,daynight,type",urutan kolom sesuai
+TH-archive-838094,n_columns,PASS,15,15,
+TH-archive-838094,row_count,PASS,2437813,2437813,jumlah baris dibandingkan dengan manifest
+TH-archive-838094,field_count,PASS,0,0,baris dengan jumlah field tidak sama dengan header
+TH-archive-838094,missing_critical,PASS,0,0,"kolom kritis: latitude, longitude, acq_date, acq_time, confidence, frp, daynight"
+TH-archive-838094,missing_noncritical,PASS,0,0,"kolom non-kritis: brightness, scan, track, satellite, instrument, version, bright_t31, type"
+TH-archive-838094,invalid_date,PASS,0,0,tanggal tidak dapat diparsing sebagai YYYY-MM-DD
+TH-archive-838094,date_out_of_range,PASS,0,0,tahun di luar rentang proyek 2012-2026
+TH-archive-838094,date_range_manifest,PASS,2012-01-20..2026-07-31,2012-01-20..2026-07-31,rentang tanggal aktual dibandingkan manifest
+TH-archive-838094,invalid_coordinate,PASS,0,0,"koordinat non-numerik, non-finite, atau di luar -90..90 / -180..180"
+TH-archive-838094,coordinate_zero,PASS,0,0,"koordinat (0,0) mencurigakan; bukan aturan keras"
+TH-archive-838094,invalid_frp,PASS,0,0,"FRP non-numerik, non-finite, atau negatif"
+TH-archive-838094,frp_zero,WARNING,0,35,"FRP bernilai 0; bukan pelanggaran sintaks, ambang minimum tidak diverifikasi"
+TH-archive-838094,invalid_confidence,PASS,0,0,"nilai di luar {l,n,h}"
+TH-archive-838094,invalid_daynight,PASS,0,0,"nilai di luar {D,N}"
+TH-archive-838094,type_presence,PASS,ada,ada,type wajib untuk archive; tidak wajib untuk NRT
+TH-archive-838094,invalid_type,PASS,0,0,"nilai di luar {0,1,2,3}"
+TH-archive-838094,invalid_acq_time,PASS,0,0,format HHMM 4 digit; zona waktu belum diverifikasi
+TH-archive-838094,version_values,PASS,2,2,versi produk di dalam file
+TH-archive-838094,satellite_values,PASS,SNPP,SNPP,nilai sensor/instrumen di dalam file
+TH-archive-838094,instrument_values,PASS,SNPP,SNPP,nilai sensor/instrumen di dalam file
+TH-nrt-838094,file_size,PASS,119010,119010,ukuran file dibandingkan dengan manifest
+TH-nrt-838094,header,PASS,"latitude,longitude,brightness,scan,track,acq_date,acq_time,satellite,instrument,confidence,version,bright_t31,frp,daynight","latitude,longitude,brightness,scan,track,acq_date,acq_time,satellite,instrument,confidence,version,bright_t31,frp,daynight",urutan kolom sesuai
+TH-nrt-838094,n_columns,PASS,14,14,
+TH-nrt-838094,row_count,PASS,1416,1416,jumlah baris dibandingkan dengan manifest
+TH-nrt-838094,field_count,PASS,0,0,baris dengan jumlah field tidak sama dengan header
+TH-nrt-838094,missing_critical,PASS,0,0,"kolom kritis: latitude, longitude, acq_date, acq_time, confidence, frp, daynight"
+TH-nrt-838094,missing_noncritical,PASS,0,0,"kolom non-kritis: brightness, scan, track, satellite, instrument, version, bright_t31, type"
+TH-nrt-838094,invalid_date,PASS,0,0,tanggal tidak dapat diparsing sebagai YYYY-MM-DD
+TH-nrt-838094,date_out_of_range,PASS,0,0,tahun di luar rentang proyek 2012-2026
+TH-nrt-838094,date_range_manifest,PASS,2026-08-01..2026-11-01,2026-08-01..2026-11-01,rentang tanggal aktual dibandingkan manifest
+TH-nrt-838094,invalid_coordinate,PASS,0,0,"koordinat non-numerik, non-finite, atau di luar -90..90 / -180..180"
+TH-nrt-838094,coordinate_zero,PASS,0,0,"koordinat (0,0) mencurigakan; bukan aturan keras"
+TH-nrt-838094,invalid_frp,PASS,0,0,"FRP non-numerik, non-finite, atau negatif"
+TH-nrt-838094,frp_zero,PASS,0,0,"FRP bernilai 0; bukan pelanggaran sintaks, ambang minimum tidak diverifikasi"
+TH-nrt-838094,invalid_confidence,PASS,0,0,"nilai di luar {l,n,h}"
+TH-nrt-838094,invalid_daynight,PASS,0,0,"nilai di luar {D,N}"
+TH-nrt-838094,type_presence,PASS,tidak ada (NRT),tidak ada,type wajib untuk archive; tidak wajib untuk NRT
+TH-nrt-838094,invalid_type,NA,tidak tersedia,tidak tersedia,kolom type tidak ada (NRT); validasi type dilewati
+TH-nrt-838094,invalid_acq_time,PASS,0,0,format HHMM 4 digit; zona waktu belum diverifikasi
+TH-nrt-838094,version_values,PASS,2.0NRT,2.0NRT,versi produk di dalam file
+TH-nrt-838094,satellite_values,PASS,SNPP,SNPP,nilai sensor/instrumen di dalam file
+TH-nrt-838094,instrument_values,PASS,SNPP,SNPP,nilai sensor/instrumen di dalam file

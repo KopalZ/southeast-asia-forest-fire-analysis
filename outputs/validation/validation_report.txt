@@ -1,0 +1,56 @@
+VALIDASI MULTI-COUNTRY — 10 DATASET
+============================================================
+Waktu     : 2026-11-04T22:41:22+07:00
+Manifest  : config/datasets.json
+Overall   : WARNING
+PASS      : 6
+WARNING   : 4
+FAIL      : 0
+Gap PASS  : 4
+Gap WARN  : 1
+Gap FAIL  : 0
+
+RINGKASAN PER DATASET
+[WARNING] ID-archive-837816 | 3,568,824 baris | 15 kolom | type=True | 2012-01-20..2026-07-31 | 5254 hari unik
+    - frp_zero: 123 (FRP bernilai 0; bukan pelanggaran sintaks, ambang minimum tidak diverifikasi)
+[PASS] ID-nrt-837816 | 571,763 baris | 14 kolom | type=False | 2026-08-01..2026-11-02 | 93 hari unik
+[WARNING] MY-archive-838165 | 224,485 baris | 15 kolom | type=True | 2012-01-20..2026-07-31 | 5092 hari unik
+    - frp_zero: 4 (FRP bernilai 0; bukan pelanggaran sintaks, ambang minimum tidak diverifikasi)
+[PASS] MY-nrt-838165 | 3,243 baris | 14 kolom | type=False | 2026-08-01..2026-11-02 | 90 hari unik
+[WARNING] MM-archive-838170 | 5,144,894 baris | 15 kolom | type=True | 2012-01-20..2026-07-30 | 4509 hari unik
+    - frp_zero: 733 (FRP bernilai 0; bukan pelanggaran sintaks, ambang minimum tidak diverifikasi)
+[PASS] MM-nrt-838170 | 1,249 baris | 14 kolom | type=False | 2026-08-02..2026-11-01 | 73 hari unik
+[PASS] PH-archive-838168 | 459,570 baris | 15 kolom | type=True | 2012-01-20..2026-07-31 | 5046 hari unik
+[PASS] PH-nrt-838168 | 2,779 baris | 14 kolom | type=False | 2026-08-01..2026-11-02 | 93 hari unik
+[WARNING] TH-archive-838094 | 2,437,813 baris | 15 kolom | type=True | 2012-01-20..2026-07-31 | 4997 hari unik
+    - frp_zero: 35 (FRP bernilai 0; bukan pelanggaran sintaks, ambang minimum tidak diverifikasi)
+[PASS] TH-nrt-838094 | 1,416 baris | 14 kolom | type=False | 2026-08-01..2026-11-01 | 86 hari unik
+
+SCHEMA ARCHIVE vs NRT
+- Archive: 15 kolom termasuk type.
+- NRT: 14 kolom tanpa type; validasi type dilewati (NA).
+
+GAP ARCHIVE–NRT PER NEGARA
+[PASS] Indonesia (ID): archive 2012-01-20..2026-07-31, NRT 2026-08-01..2026-11-02, gap=0 hari, overlap=0 hari | archive dan NRT bersambung tanpa gap
+[WARNING] Myanmar (MM): archive 2012-01-20..2026-07-30, NRT 2026-08-02..2026-11-01, gap=2 hari, overlap=0 hari | ada 2 hari tanpa data di antara archive dan NRT
+[PASS] Malaysia (MY): archive 2012-01-20..2026-07-31, NRT 2026-08-01..2026-11-02, gap=0 hari, overlap=0 hari | archive dan NRT bersambung tanpa gap
+[PASS] Filipina (PH): archive 2012-01-20..2026-07-31, NRT 2026-08-01..2026-11-02, gap=0 hari, overlap=0 hari | archive dan NRT bersambung tanpa gap
+[PASS] Thailand (TH): archive 2012-01-20..2026-07-31, NRT 2026-08-01..2026-11-01, gap=0 hari, overlap=0 hari | archive dan NRT bersambung tanpa gap
+
+TEMUAN
+- ID-archive-837816 (WARNING): frp_zero: 123 (FRP bernilai 0; bukan pelanggaran sintaks, ambang minimum tidak diverifikasi)
+- MY-archive-838165 (WARNING): frp_zero: 4 (FRP bernilai 0; bukan pelanggaran sintaks, ambang minimum tidak diverifikasi)
+- MM-archive-838170 (WARNING): frp_zero: 733 (FRP bernilai 0; bukan pelanggaran sintaks, ambang minimum tidak diverifikasi)
+- TH-archive-838094 (WARNING): frp_zero: 35 (FRP bernilai 0; bukan pelanggaran sintaks, ambang minimum tidak diverifikasi)
+- MM archive/NRT (WARNING): gap=2 hari, overlap=0 hari | ada 2 hari tanpa data di antara archive dan NRT
+
+CATATAN METODOLOGI
+- Archive memiliki 15 kolom termasuk type; NRT memiliki 14 kolom tanpa type.
+- Arti kode type (0/1/2/3) belum diverifikasi dari dokumentasi FIRMS pada tahap ini; validasi hanya memeriksa domain nilai.
+- Zona waktu acq_time (UTC vs lokal) belum diverifikasi.
+- Overlap yang dihitung adalah overlap rentang tanggal, bukan overlap spasial bounding box.
+- FRP diperiksa numerik dan non-negatif; satuan dan ambang fisik tidak divalidasi.
+- FRP bernilai 0 dicatat sebagai WARNING karena ambang minimum tidak diverifikasi, bukan dianggap error otomatis.
+- brightness, scan, track, dan bright_t31 belum divalidasi rentangnya pada tahap ini.
+- Tahun 2012 dan 2026 adalah periode parsial; jangan membandingkan total mentah dengan tahun penuh.
+- Jumlah hari unik adalah hari yang memiliki deteksi hotspot; hari tanpa deteksi tidak otomatis berarti data hilang.

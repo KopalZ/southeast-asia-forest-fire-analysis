@@ -1,0 +1,230 @@
+{
+  "generated_at": "2026-11-04T22:19:24+07:00",
+  "baseline_source": "DL_FIRE_SV-C2_837816\\hasil_analisis",
+  "baseline_frozen": "baseline\\indonesia_v1",
+  "freeze_status": "created",
+  "frozen_file_count": 10,
+  "recomputed_dir": "outputs\\baseline\\recomputed",
+  "overall": "PASS",
+  "passed": 19,
+  "total_checks": 19,
+  "checks": [
+    {
+      "name": "total_baris",
+      "status": "PASS",
+      "expected": 4140587,
+      "actual": 4140587,
+      "note": ""
+    },
+    {
+      "name": "tanggal_awal",
+      "status": "PASS",
+      "expected": "2012-01-20",
+      "actual": "2012-01-20",
+      "note": ""
+    },
+    {
+      "name": "tanggal_akhir",
+      "status": "PASS",
+      "expected": "2026-11-02",
+      "actual": "2026-11-02",
+      "note": ""
+    },
+    {
+      "name": "jumlah_tahun",
+      "status": "PASS",
+      "expected": 15,
+      "actual": 15,
+      "note": ""
+    },
+    {
+      "name": "jumlah_bulan",
+      "status": "PASS",
+      "expected": 179,
+      "actual": 179,
+      "note": ""
+    },
+    {
+      "name": "jumlah_grid_spasial",
+      "status": "PASS",
+      "expected": 15123,
+      "actual": 15123,
+      "note": ""
+    },
+    {
+      "name": "latitude_minimum",
+      "status": "PASS",
+      "expected": "-10.97676",
+      "actual": "-10.97676",
+      "note": ""
+    },
+    {
+      "name": "latitude_maksimum",
+      "status": "PASS",
+      "expected": "5.8782",
+      "actual": "5.8782",
+      "note": ""
+    },
+    {
+      "name": "longitude_minimum",
+      "status": "PASS",
+      "expected": "95.01992",
+      "actual": "95.01992",
+      "note": ""
+    },
+    {
+      "name": "longitude_maksimum",
+      "status": "PASS",
+      "expected": "140.97745",
+      "actual": "140.97745",
+      "note": ""
+    },
+    {
+      "name": "rata_rata_frp",
+      "status": "PASS",
+      "expected": "8.09",
+      "actual": "8.09",
+      "note": ""
+    },
+    {
+      "name": "frp_minimum",
+      "status": "PASS",
+      "expected": "0.0",
+      "actual": "0.0",
+      "note": ""
+    },
+    {
+      "name": "frp_maksimum",
+      "status": "PASS",
+      "expected": "1951.3",
+      "actual": "1951.3",
+      "note": ""
+    },
+    {
+      "name": "hotspot_tahunan",
+      "status": "PASS",
+      "expected": "15 entri",
+      "actual": "15 entri",
+      "note": ""
+    },
+    {
+      "name": "hotspot_bulanan",
+      "status": "PASS",
+      "expected": "179 entri",
+      "actual": "179 entri",
+      "note": ""
+    },
+    {
+      "name": "hotspot_spasial",
+      "status": "PASS",
+      "expected": "15123 entri",
+      "actual": "15123 entri",
+      "note": ""
+    },
+    {
+      "name": "hotspot_karakteristik",
+      "status": "PASS",
+      "expected": "5 entri",
+      "actual": "5 entri",
+      "note": ""
+    },
+    {
+      "name": "top5_tahun",
+      "status": "PASS",
+      "expected": [
+        [
+          "2015",
+          875824
+        ],
+        [
+          "2026",
+          626067
+        ],
+        [
+          "2014",
+          555597
+        ],
+        [
+          "2019",
+          437281
+        ],
+        [
+          "2012",
+          318613
+        ]
+      ],
+      "actual": [
+        [
+          "2015",
+          875824
+        ],
+        [
+          "2026",
+          626067
+        ],
+        [
+          "2014",
+          555597
+        ],
+        [
+          "2019",
+          437281
+        ],
+        [
+          "2012",
+          318613
+        ]
+      ],
+      "note": ""
+    },
+    {
+      "name": "top5_bulan",
+      "status": "PASS",
+      "expected": [
+        [
+          "2015-10",
+          322008
+        ],
+        [
+          "2015-09",
+          295035
+        ],
+        [
+          "2026-09",
+          214804
+        ],
+        [
+          "2026-10",
+          209142
+        ],
+        [
+          "2019-09",
+          197018
+        ]
+      ],
+      "actual": [
+        [
+          "2015-10",
+          322008
+        ],
+        [
+          "2015-09",
+          295035
+        ],
+        [
+          "2026-09",
+          214804
+        ],
+        [
+          "2026-10",
+          209142
+        ],
+        [
+          "2019-09",
+          197018
+        ]
+      ],
+      "note": ""
+    }
+  ]
+}

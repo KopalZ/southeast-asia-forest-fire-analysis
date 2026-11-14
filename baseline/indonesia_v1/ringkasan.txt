@@ -1,0 +1,29 @@
+RINGKASAN ANALISIS HOTSPOT NASA FIRMS
+=============================================
+Total baris: 4,140,587
+Tanggal awal: 2012-01-20
+Tanggal akhir: 2026-11-02
+Jumlah tahun: 15
+Jumlah bulan: 179
+Jumlah grid spasial: 15123
+Latitude minimum: -10.97676
+Latitude maksimum: 5.8782
+Longitude minimum: 95.01992
+Longitude maksimum: 140.97745
+Rata-rata FRP: 8.09
+FRP minimum: 0.0
+FRP maksimum: 1951.3
+
+TAHUN DENGAN HOTSPOT TERBANYAK
+2015: 875,824
+2026: 626,067
+2014: 555,597
+2019: 437,281
+2012: 318,613
+
+BULAN DENGAN HOTSPOT TERBANYAK
+2015-10: 322,008
+2015-09: 295,035
+2026-09: 214,804
+2026-10: 209,142
+2019-09: 197,018

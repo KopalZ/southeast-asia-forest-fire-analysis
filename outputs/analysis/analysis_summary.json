@@ -1,0 +1,590 @@
+{
+  "generated_at": "2026-11-04T22:55:38+07:00",
+  "runtime_seconds": 125.839,
+  "peak_memory_mib": 39.28,
+  "manifest": {
+    "path": "config/datasets.json",
+    "dataset_count": 10,
+    "rows": 12416036
+  },
+  "validation": {
+    "path": "outputs/validation/validation_summary.json",
+    "available": true,
+    "overall_status": "WARNING",
+    "rows": 12416036
+  },
+  "consistency": {
+    "rows_manifest": 12416036,
+    "rows_validation": 12416036,
+    "rows_analyzed": 12416036,
+    "status": "PASS",
+    "mismatches": []
+  },
+  "totals": {
+    "detections": 12416036,
+    "archive": 11835586,
+    "nrt": 580450,
+    "frp_sum": 99116950.0,
+    "frp_zero": 895,
+    "grid_cells": 31529
+  },
+  "countries": [
+    {
+      "country_code": "ID",
+      "country_name": "Indonesia",
+      "rows_archive": 3568824,
+      "rows_nrt": 571763,
+      "rows_total": 4140587,
+      "date_archive": "2012-01-20..2026-07-31",
+      "date_nrt": "2026-08-01..2026-11-02",
+      "frp_sum_archive": 29313550.14,
+      "frp_sum_nrt": 4182118.31,
+      "frp_sum_total": 33495668.45,
+      "frp_mean_total": 8.0896,
+      "frp_zero_total": 123,
+      "confidence_total": {
+        "low": 246274,
+        "nominal": 3751795,
+        "high": 142518
+      },
+      "daynight_total": {
+        "D": 2682180,
+        "N": 1458407
+      },
+      "type_archive": {
+        "0": 3396415,
+        "1": 48217,
+        "2": 105595,
+        "3": 18597
+      },
+      "grid_cells": 15123,
+      "top_grids": [
+        {
+          "grid_latitude": "-2.6",
+          "grid_longitude": "121.4",
+          "detections_total": 24204,
+          "detections_archive": 23287,
+          "detections_nrt": 917
+        },
+        {
+          "grid_latitude": "-8.1",
+          "grid_longitude": "112.9",
+          "detections_total": 15023,
+          "detections_archive": 14293,
+          "detections_nrt": 730
+        },
+        {
+          "grid_latitude": "-2.9",
+          "grid_longitude": "112.9",
+          "detections_total": 10615,
+          "detections_archive": 8367,
+          "detections_nrt": 2248
+        }
+      ]
+    },
+    {
+      "country_code": "MY",
+      "country_name": "Malaysia",
+      "rows_archive": 224485,
+      "rows_nrt": 3243,
+      "rows_total": 227728,
+      "date_archive": "2012-01-20..2026-07-31",
+      "date_nrt": "2026-08-01..2026-11-02",
+      "frp_sum_archive": 1641395.35,
+      "frp_sum_nrt": 25969.33,
+      "frp_sum_total": 1667364.68,
+      "frp_mean_total": 7.3217,
+      "frp_zero_total": 4,
+      "confidence_total": {
+        "low": 9546,
+        "nominal": 212857,
+        "high": 5325
+      },
+      "daynight_total": {
+        "D": 149077,
+        "N": 78651
+      },
+      "type_archive": {
+        "0": 200884,
+        "1": 0,
+        "2": 23100,
+        "3": 501
+      },
+      "grid_cells": 2462,
+      "top_grids": [
+        {
+          "grid_latitude": "3.3",
+          "grid_longitude": "113.1",
+          "detections_total": 8968,
+          "detections_archive": 8679,
+          "detections_nrt": 289
+        },
+        {
+          "grid_latitude": "1.4",
+          "grid_longitude": "104.2",
+          "detections_total": 3780,
+          "detections_archive": 3642,
+          "detections_nrt": 138
+        },
+        {
+          "grid_latitude": "3.3",
+          "grid_longitude": "103.4",
+          "detections_total": 3625,
+          "detections_archive": 3622,
+          "detections_nrt": 3
+        }
+      ]
+    },
+    {
+      "country_code": "MM",
+      "country_name": "Myanmar",
+      "rows_archive": 5144894,
+      "rows_nrt": 1249,
+      "rows_total": 5146143,
+      "date_archive": "2012-01-20..2026-07-30",
+      "date_nrt": "2026-08-02..2026-11-01",
+      "frp_sum_archive": 47869513.09,
+      "frp_sum_nrt": 5221.21,
+      "frp_sum_total": 47874734.3,
+      "frp_mean_total": 9.303,
+      "frp_zero_total": 733,
+      "confidence_total": {
+        "low": 777897,
+        "nominal": 4143768,
+        "high": 224478
+      },
+      "daynight_total": {
+        "D": 3908415,
+        "N": 1237728
+      },
+      "type_archive": {
+        "0": 5138316,
+        "1": 0,
+        "2": 4231,
+        "3": 2347
+      },
+      "grid_cells": 6114,
+      "top_grids": [
+        {
+          "grid_latitude": "16.2",
+          "grid_longitude": "98.8",
+          "detections_total": 5069,
+          "detections_archive": 5069,
+          "detections_nrt": 0
+        },
+        {
+          "grid_latitude": "16.3",
+          "grid_longitude": "98.8",
+          "detections_total": 4687,
+          "detections_archive": 4687,
+          "detections_nrt": 0
+        },
+        {
+          "grid_latitude": "21.3",
+          "grid_longitude": "97.1",
+          "detections_total": 4619,
+          "detections_archive": 4619,
+          "detections_nrt": 0
+        }
+      ]
+    },
+    {
+      "country_code": "PH",
+      "country_name": "Filipina",
+      "rows_archive": 459570,
+      "rows_nrt": 2779,
+      "rows_total": 462349,
+      "date_archive": "2012-01-20..2026-07-31",
+      "date_nrt": "2026-08-01..2026-11-02",
+      "frp_sum_archive": 3058332.41,
+      "frp_sum_nrt": 16127.61,
+      "frp_sum_total": 3074460.02,
+      "frp_mean_total": 6.6497,
+      "frp_zero_total": 0,
+      "confidence_total": {
+        "low": 36021,
+        "nominal": 412786,
+        "high": 13542
+      },
+      "daynight_total": {
+        "D": 391691,
+        "N": 70658
+      },
+      "type_archive": {
+        "0": 443156,
+        "1": 6205,
+        "2": 6646,
+        "3": 3563
+      },
+      "grid_cells": 3207,
+      "top_grids": [
+        {
+          "grid_latitude": "14.0",
+          "grid_longitude": "121.0",
+          "detections_total": 4329,
+          "detections_archive": 4293,
+          "detections_nrt": 36
+        },
+        {
+          "grid_latitude": "12.1",
+          "grid_longitude": "121.4",
+          "detections_total": 3480,
+          "detections_archive": 3470,
+          "detections_nrt": 10
+        },
+        {
+          "grid_latitude": "13.3",
+          "grid_longitude": "123.7",
+          "detections_total": 3411,
+          "detections_archive": 3356,
+          "detections_nrt": 55
+        }
+      ]
+    },
+    {
+      "country_code": "TH",
+      "country_name": "Thailand",
+      "rows_archive": 2437813,
+      "rows_nrt": 1416,
+      "rows_total": 2439229,
+      "date_archive": "2012-01-20..2026-07-31",
+      "date_nrt": "2026-08-01..2026-11-01",
+      "frp_sum_archive": 12998562.98,
+      "frp_sum_nrt": 6159.57,
+      "frp_sum_total": 13004722.55,
+      "frp_mean_total": 5.3315,
+      "frp_zero_total": 35,
+      "confidence_total": {
+        "low": 288045,
+        "nominal": 2095399,
+        "high": 55785
+      },
+      "daynight_total": {
+        "D": 1599950,
+        "N": 839279
+      },
+      "type_archive": {
+        "0": 2417280,
+        "1": 0,
+        "2": 19364,
+        "3": 1169
+      },
+      "grid_cells": 4623,
+      "top_grids": [
+        {
+          "grid_latitude": "14.6",
+          "grid_longitude": "101.1",
+          "detections_total": 7393,
+          "detections_archive": 7356,
+          "detections_nrt": 37
+        },
+        {
+          "grid_latitude": "14.6",
+          "grid_longitude": "101.0",
+          "detections_total": 4068,
+          "detections_archive": 4038,
+          "detections_nrt": 30
+        },
+        {
+          "grid_latitude": "18.3",
+          "grid_longitude": "97.7",
+          "detections_total": 3618,
+          "detections_archive": 3618,
+          "detections_nrt": 0
+        }
+      ]
+    }
+  ],
+  "yearly_totals": [
+    {
+      "year": 2012,
+      "detections": 898488,
+      "is_partial_year": true
+    },
+    {
+      "year": 2013,
+      "detections": 907370,
+      "is_partial_year": false
+    },
+    {
+      "year": 2014,
+      "detections": 1232918,
+      "is_partial_year": false
+    },
+    {
+      "year": 2015,
+      "detections": 1486854,
+      "is_partial_year": false
+    },
+    {
+      "year": 2016,
+      "detections": 761085,
+      "is_partial_year": false
+    },
+    {
+      "year": 2017,
+      "detections": 537406,
+      "is_partial_year": false
+    },
+    {
+      "year": 2018,
+      "detections": 612403,
+      "is_partial_year": false
+    },
+    {
+      "year": 2019,
+      "detections": 1118048,
+      "is_partial_year": false
+    },
+    {
+      "year": 2020,
+      "detections": 775506,
+      "is_partial_year": false
+    },
+    {
+      "year": 2021,
+      "detections": 561321,
+      "is_partial_year": false
+    },
+    {
+      "year": 2022,
+      "detections": 364173,
+      "is_partial_year": false
+    },
+    {
+      "year": 2023,
+      "detections": 890831,
+      "is_partial_year": false
+    },
+    {
+      "year": 2024,
+      "detections": 639211,
+      "is_partial_year": false
+    },
+    {
+      "year": 2025,
+      "detections": 522986,
+      "is_partial_year": false
+    },
+    {
+      "year": 2026,
+      "detections": 1107436,
+      "is_partial_year": true
+    }
+  ],
+  "top_grids": [
+    {
+      "country_code": "ID",
+      "country_name": "Indonesia",
+      "grid_latitude": -2.6,
+      "grid_longitude": 121.4,
+      "detections_total": 24204,
+      "detections_archive": 23287,
+      "detections_nrt": 917,
+      "rank": 1
+    },
+    {
+      "country_code": "ID",
+      "country_name": "Indonesia",
+      "grid_latitude": -8.1,
+      "grid_longitude": 112.9,
+      "detections_total": 15023,
+      "detections_archive": 14293,
+      "detections_nrt": 730,
+      "rank": 2
+    },
+    {
+      "country_code": "ID",
+      "country_name": "Indonesia",
+      "grid_latitude": -2.9,
+      "grid_longitude": 112.9,
+      "detections_total": 10615,
+      "detections_archive": 8367,
+      "detections_nrt": 2248,
+      "rank": 3
+    },
+    {
+      "country_code": "ID",
+      "country_name": "Indonesia",
+      "grid_latitude": -3.9,
+      "grid_longitude": 122.4,
+      "detections_total": 9793,
+      "detections_archive": 8774,
+      "detections_nrt": 1019,
+      "rank": 4
+    },
+    {
+      "country_code": "ID",
+      "country_name": "Indonesia",
+      "grid_latitude": -2.2,
+      "grid_longitude": 113.8,
+      "detections_total": 9400,
+      "detections_archive": 5470,
+      "detections_nrt": 3930,
+      "rank": 5
+    },
+    {
+      "country_code": "ID",
+      "country_name": "Indonesia",
+      "grid_latitude": 1.5,
+      "grid_longitude": 127.6,
+      "detections_total": 9343,
+      "detections_archive": 8955,
+      "detections_nrt": 388,
+      "rank": 6
+    },
+    {
+      "country_code": "MY",
+      "country_name": "Malaysia",
+      "grid_latitude": 3.3,
+      "grid_longitude": 113.1,
+      "detections_total": 8968,
+      "detections_archive": 8679,
+      "detections_nrt": 289,
+      "rank": 7
+    },
+    {
+      "country_code": "ID",
+      "country_name": "Indonesia",
+      "grid_latitude": -8.2,
+      "grid_longitude": 119.1,
+      "detections_total": 8176,
+      "detections_archive": 8124,
+      "detections_nrt": 52,
+      "rank": 8
+    },
+    {
+      "country_code": "ID",
+      "country_name": "Indonesia",
+      "grid_latitude": -3.2,
+      "grid_longitude": 114.0,
+      "detections_total": 7847,
+      "detections_archive": 7039,
+      "detections_nrt": 808,
+      "rank": 9
+    },
+    {
+      "country_code": "ID",
+      "country_name": "Indonesia",
+      "grid_latitude": -2.3,
+      "grid_longitude": 114.0,
+      "detections_total": 7654,
+      "detections_archive": 5092,
+      "detections_nrt": 2562,
+      "rank": 10
+    },
+    {
+      "country_code": "ID",
+      "country_name": "Indonesia",
+      "grid_latitude": 2.8,
+      "grid_longitude": 125.4,
+      "detections_total": 7630,
+      "detections_archive": 7377,
+      "detections_nrt": 253,
+      "rank": 11
+    },
+    {
+      "country_code": "ID",
+      "country_name": "Indonesia",
+      "grid_latitude": -2.5,
+      "grid_longitude": 114.4,
+      "detections_total": 7515,
+      "detections_archive": 6000,
+      "detections_nrt": 1515,
+      "rank": 12
+    },
+    {
+      "country_code": "ID",
+      "country_name": "Indonesia",
+      "grid_latitude": -3.0,
+      "grid_longitude": 111.0,
+      "detections_total": 7442,
+      "detections_archive": 6603,
+      "detections_nrt": 839,
+      "rank": 13
+    },
+    {
+      "country_code": "TH",
+      "country_name": "Thailand",
+      "grid_latitude": 14.6,
+      "grid_longitude": 101.1,
+      "detections_total": 7393,
+      "detections_archive": 7356,
+      "detections_nrt": 37,
+      "rank": 14
+    },
+    {
+      "country_code": "ID",
+      "country_name": "Indonesia",
+      "grid_latitude": -3.1,
+      "grid_longitude": 114.0,
+      "detections_total": 7338,
+      "detections_archive": 5213,
+      "detections_nrt": 2125,
+      "rank": 15
+    },
+    {
+      "country_code": "ID",
+      "country_name": "Indonesia",
+      "grid_latitude": -3.0,
+      "grid_longitude": 114.0,
+      "detections_total": 6813,
+      "detections_archive": 5224,
+      "detections_nrt": 1589,
+      "rank": 16
+    },
+    {
+      "country_code": "ID",
+      "country_name": "Indonesia",
+      "grid_latitude": -3.0,
+      "grid_longitude": 112.9,
+      "detections_total": 6588,
+      "detections_archive": 5663,
+      "detections_nrt": 925,
+      "rank": 17
+    },
+    {
+      "country_code": "ID",
+      "country_name": "Indonesia",
+      "grid_latitude": -2.6,
+      "grid_longitude": 114.3,
+      "detections_total": 6375,
+      "detections_archive": 5129,
+      "detections_nrt": 1246,
+      "rank": 18
+    },
+    {
+      "country_code": "ID",
+      "country_name": "Indonesia",
+      "grid_latitude": -6.0,
+      "grid_longitude": 106.0,
+      "detections_total": 6221,
+      "detections_archive": 6062,
+      "detections_nrt": 159,
+      "rank": 19
+    },
+    {
+      "country_code": "ID",
+      "country_name": "Indonesia",
+      "grid_latitude": -1.9,
+      "grid_longitude": 103.9,
+      "detections_total": 6159,
+      "detections_archive": 5286,
+      "detections_nrt": 873,
+      "rank": 20
+    }
+  ],
+  "methodology_notes": [
+    "Jumlah yang dilaporkan adalah jumlah baris deteksi hotspot, bukan jumlah kejadian kebakaran unik yang terverifikasi.",
+    "Archive dan NRT dihitung terpisah. Baris 'combined' adalah penjumlahan deteksi archive+NRT yang rentang tanggalnya tidak tumpang tindih, bukan kejadian unik.",
+    "FRP adalah Fire Radiative Power, bukan luas area terbakar dan bukan ukuran kerugian.",
+    "Confidence 'n' berarti nominal, bukan high. Hanya 'h' yang high.",
+    "Arti kode type 0/1/2/3 belum diverifikasi dari dokumentasi FIRMS; hanya distribusinya yang dicatat.",
+    "Grid spasial memakai pembulatan satu desimal round(lat,1)/round(lon,1), sama dengan baseline Indonesia.",
+    "Setiap grid menyertakan country_code agar lokasi antarnegara tidak tercampur.",
+    "Tahun 2012 dan 2026 adalah tahun parsial; total mentahnya tidak boleh dibandingkan dengan tahun penuh.",
+    "Gap Myanmar 2026-07-31..2026-08-01 tidak diisi dengan asumsi apa pun.",
+    "FRP nol tetap dihitung sebagai nilai valid non-negatif; jumlahnya dicatat terpisah.",
+    "Tahun parsial ditandai, tetapi tren tahunan tetap disajikan apa adanya."
+  ]
+}

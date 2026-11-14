@@ -1,0 +1,135 @@
+ANALISIS MULTI-COUNTRY HOTSPOT NASA FIRMS
+==============================================================
+Waktu            : 2026-11-04T22:55:38+07:00
+Runtime          : 125.8 detik
+Memori puncak    : 39.3 MiB (PeakWorkingSetSize)
+Manifest         : config/datasets.json
+Validasi         : outputs/validation/validation_summary.json
+
+KONSISTENSI JUMLAH BARIS
+  Manifest   : 12,416,036
+  Validasi   : 12,416,036
+  Dianalisis : 12,416,036
+  Status     : PASS
+
+RINGKASAN PER NEGARA
+
+Indonesia (ID)
+  Baris     : archive 3,568,824 | NRT 571,763 | total 4,140,587
+  Rentang   : archive 2012-01-20..2026-07-31 | NRT 2026-08-01..2026-11-02
+  FRP       : total 33,495,668.45 | rata-rata 8.09 | nol 123
+  Confidence: l=246,274 | n=3,751,795 | h=142,518
+  Day/night : D=2,682,180 | N=1,458,407
+  Type (archive): 0=3,396,415 | 1=48,217 | 2=105,595 | 3=18,597
+  Grid 0,1 derajat : 15,123 sel
+    (-2.6, 121.4): 24,204 (archive 23,287, NRT 917)
+    (-8.1, 112.9): 15,023 (archive 14,293, NRT 730)
+    (-2.9, 112.9): 10,615 (archive 8,367, NRT 2,248)
+
+Malaysia (MY)
+  Baris     : archive 224,485 | NRT 3,243 | total 227,728
+  Rentang   : archive 2012-01-20..2026-07-31 | NRT 2026-08-01..2026-11-02
+  FRP       : total 1,667,364.68 | rata-rata 7.32 | nol 4
+  Confidence: l=9,546 | n=212,857 | h=5,325
+  Day/night : D=149,077 | N=78,651
+  Type (archive): 0=200,884 | 1=0 | 2=23,100 | 3=501
+  Grid 0,1 derajat : 2,462 sel
+    (3.3, 113.1): 8,968 (archive 8,679, NRT 289)
+    (1.4, 104.2): 3,780 (archive 3,642, NRT 138)
+    (3.3, 103.4): 3,625 (archive 3,622, NRT 3)
+
+Myanmar (MM)
+  Baris     : archive 5,144,894 | NRT 1,249 | total 5,146,143
+  Rentang   : archive 2012-01-20..2026-07-30 | NRT 2026-08-02..2026-11-01
+  FRP       : total 47,874,734.30 | rata-rata 9.30 | nol 733
+  Confidence: l=777,897 | n=4,143,768 | h=224,478
+  Day/night : D=3,908,415 | N=1,237,728
+  Type (archive): 0=5,138,316 | 1=0 | 2=4,231 | 3=2,347
+  Grid 0,1 derajat : 6,114 sel
+    (16.2, 98.8): 5,069 (archive 5,069, NRT 0)
+    (16.3, 98.8): 4,687 (archive 4,687, NRT 0)
+    (21.3, 97.1): 4,619 (archive 4,619, NRT 0)
+
+Filipina (PH)
+  Baris     : archive 459,570 | NRT 2,779 | total 462,349
+  Rentang   : archive 2012-01-20..2026-07-31 | NRT 2026-08-01..2026-11-02
+  FRP       : total 3,074,460.02 | rata-rata 6.65 | nol 0
+  Confidence: l=36,021 | n=412,786 | h=13,542
+  Day/night : D=391,691 | N=70,658
+  Type (archive): 0=443,156 | 1=6,205 | 2=6,646 | 3=3,563
+  Grid 0,1 derajat : 3,207 sel
+    (14.0, 121.0): 4,329 (archive 4,293, NRT 36)
+    (12.1, 121.4): 3,480 (archive 3,470, NRT 10)
+    (13.3, 123.7): 3,411 (archive 3,356, NRT 55)
+
+Thailand (TH)
+  Baris     : archive 2,437,813 | NRT 1,416 | total 2,439,229
+  Rentang   : archive 2012-01-20..2026-07-31 | NRT 2026-08-01..2026-11-01
+  FRP       : total 13,004,722.55 | rata-rata 5.33 | nol 35
+  Confidence: l=288,045 | n=2,095,399 | h=55,785
+  Day/night : D=1,599,950 | N=839,279
+  Type (archive): 0=2,417,280 | 1=0 | 2=19,364 | 3=1,169
+  Grid 0,1 derajat : 4,623 sel
+    (14.6, 101.1): 7,393 (archive 7,356, NRT 37)
+    (14.6, 101.0): 4,068 (archive 4,038, NRT 30)
+    (18.3, 97.7): 3,618 (archive 3,618, NRT 0)
+
+TOP 20 GRID SPASIAL (SEMUA NEGARA)
+   1. ID (-2.6, 121.4) = 24,204 deteksi (archive 23,287, NRT 917)
+   2. ID (-8.1, 112.9) = 15,023 deteksi (archive 14,293, NRT 730)
+   3. ID (-2.9, 112.9) = 10,615 deteksi (archive 8,367, NRT 2,248)
+   4. ID (-3.9, 122.4) = 9,793 deteksi (archive 8,774, NRT 1,019)
+   5. ID (-2.2, 113.8) = 9,400 deteksi (archive 5,470, NRT 3,930)
+   6. ID (1.5, 127.6) = 9,343 deteksi (archive 8,955, NRT 388)
+   7. MY (3.3, 113.1) = 8,968 deteksi (archive 8,679, NRT 289)
+   8. ID (-8.2, 119.1) = 8,176 deteksi (archive 8,124, NRT 52)
+   9. ID (-3.2, 114.0) = 7,847 deteksi (archive 7,039, NRT 808)
+  10. ID (-2.3, 114.0) = 7,654 deteksi (archive 5,092, NRT 2,562)
+  11. ID (2.8, 125.4) = 7,630 deteksi (archive 7,377, NRT 253)
+  12. ID (-2.5, 114.4) = 7,515 deteksi (archive 6,000, NRT 1,515)
+  13. ID (-3.0, 111.0) = 7,442 deteksi (archive 6,603, NRT 839)
+  14. TH (14.6, 101.1) = 7,393 deteksi (archive 7,356, NRT 37)
+  15. ID (-3.1, 114.0) = 7,338 deteksi (archive 5,213, NRT 2,125)
+  16. ID (-3.0, 114.0) = 6,813 deteksi (archive 5,224, NRT 1,589)
+  17. ID (-3.0, 112.9) = 6,588 deteksi (archive 5,663, NRT 925)
+  18. ID (-2.6, 114.3) = 6,375 deteksi (archive 5,129, NRT 1,246)
+  19. ID (-6.0, 106.0) = 6,221 deteksi (archive 6,062, NRT 159)
+  20. ID (-1.9, 103.9) = 6,159 deteksi (archive 5,286, NRT 873)
+
+TOTAL PER TAHUN (GABUNGAN NEGARA)
+  2012: 898,488 [parsial]
+  2013: 907,370
+  2014: 1,232,918
+  2015: 1,486,854
+  2016: 761,085
+  2017: 537,406
+  2018: 612,403
+  2019: 1,118,048
+  2020: 775,506
+  2021: 561,321
+  2022: 364,173
+  2023: 890,831
+  2024: 639,211
+  2025: 522,986
+  2026: 1,107,436 [parsial]
+
+CATATAN METODOLOGI
+- Jumlah yang dilaporkan adalah jumlah baris deteksi hotspot, bukan jumlah kejadian kebakaran unik yang terverifikasi.
+- Archive dan NRT dihitung terpisah. Baris 'combined' adalah penjumlahan deteksi archive+NRT yang rentang tanggalnya tidak tumpang tindih, bukan kejadian unik.
+- FRP adalah Fire Radiative Power, bukan luas area terbakar dan bukan ukuran kerugian.
+- Confidence 'n' berarti nominal, bukan high. Hanya 'h' yang high.
+- Arti kode type 0/1/2/3 belum diverifikasi dari dokumentasi FIRMS; hanya distribusinya yang dicatat.
+- Grid spasial memakai pembulatan satu desimal round(lat,1)/round(lon,1), sama dengan baseline Indonesia.
+- Setiap grid menyertakan country_code agar lokasi antarnegara tidak tercampur.
+- Tahun 2012 dan 2026 adalah tahun parsial; total mentahnya tidak boleh dibandingkan dengan tahun penuh.
+- Gap Myanmar 2026-07-31..2026-08-01 tidak diisi dengan asumsi apa pun.
+- FRP nol tetap dihitung sebagai nilai valid non-negatif; jumlahnya dicatat terpisah.
+- Tahun parsial ditandai, tetapi tren tahunan tetap disajikan apa adanya.
+
+FILE OUTPUT
+  yearly_summary.csv
+  monthly_summary.csv
+  spatial_top20.csv
+  characteristics.csv
+  analysis_summary.json
+  analysis_report.txt
