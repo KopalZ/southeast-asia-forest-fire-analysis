@@ -12,11 +12,18 @@ data_asia_tenggara/*/*.csv
 !outputs/**/*.csv
 !baseline/**/*.csv
 
-# Temporary build, test, and intermediate working files
-laporan/build/
-laporan/backup/
-docs/_public_work.docx
+# Private academic reports, screenshots, and logs (Public docs in docs/)
+laporan/
+docs/*.docx
+docs/*.pdf
+docs/_public_work*
 Laporan_Tugas_Big_Data_Revisi*.pdf
+
+# Local machine scripts and evidence logs containing usernames/paths
+data_asia_tenggara/*.sh
+data_asia_tenggara/*.txt
+DL_FIRE_SV-C2_837816/*.sh
+DL_FIRE_SV-C2_837816/*.txt
 
 # Python bytecode and caches
 __pycache__/
